@@ -29,3 +29,6 @@ urlpatterns = [
     path('submit', views.submit, name="submit"),
     path('skip', views.skip_ques, name="skip")
 ]
+
+handler404 = 'quiz.views.handler404'
+handler500 = 'quiz.views.handler500'

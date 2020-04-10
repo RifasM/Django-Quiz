@@ -1,3 +1,4 @@
+from django.template import RequestContext
 from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
@@ -104,3 +105,17 @@ def skip_ques(request):
             return render(request, 'quiz.html', {'user': username, 'ques': q[0][0], 'num': qno+1, 'score': s, 'time_left': t})
     except Exception as e:
         return render(request, "error.html", {"user": request.user.get_full_name()})
+
+
+def handler404(request, exception):
+    context = {}
+    response = render(request, '404.html', context)
+    response.status_code = 404
+    return response
+
+
+def handler500(request):
+    context = {}
+    response = render(request, '500.html', context)
+    response.status_code = 500
+    return response
