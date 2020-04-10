@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bye</title>
-</head>
-<body>
-Thanks bro
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Thank You</h2>
+                          <h3 class="title">We will get back to you soon with the results</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

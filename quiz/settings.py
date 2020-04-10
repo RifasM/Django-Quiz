@@ -25,7 +25,7 @@ SECRET_KEY = 'hgn9=uy%ky+yopk#q1ba^^fel0sy=5&=l8aj@fldrm04^l6^mr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,3 +122,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'collect_static')]
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+SESSION_COOKIE_AGE = 5 * 60
+
+TEST_NAME = "Practise Test"
+
+NUM_OF_QUESTIONS = 2
