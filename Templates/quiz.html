@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+  <head>
+    <title>Efkairies</title>
+    <link href="{% static 'bootstrap.min.css'%}" rel="stylesheet">
+    <style>
+      h3 {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+  {% block content %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Welcome, {{ user }}!</a>
+    </nav>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card mb-3 align-item-center">
+          <h3 id="demo" class="card-header">
+            <script>
+              var deadline = new Date("May 12, 2020 15:37:25").getTime();
+              var x = setInterval(function() {
+                var now = new Date().getTime();
+                var t = deadline - now;
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                document.getElementById("demo").innerHTML = "Timer : "+days + "d "+ hours + "h " + minutes + "m " + seconds + "s ";
+                if (t < 0) {
+                  clearInterval(x);
+                  document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+              }, 1000);
+            </script>
+          </h3>
+      <h3>Your Score: {{ score }}</h3>
+              <div class="card-body">
+                <h4>Question {{ num }} :</h4>
+              </div>
+              <img style="height: 500px; width: 50%; display: block;" src="{{ ques }}" alt="Question">
+              <div class="card-body">
+                <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'next_ques' %}">
+                    {% csrf_token %}
+                  <input class="form-control mr-sm-2" type="text" name="answer" placeholder="Your Answer!!!" required>
+                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Submit</button>
+                </form>
+              </div>
+              <div class="card-body">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Skip</button>
+              </div>
+            {% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Efkaries</title>
+      <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body{
+            padding: 10%;
+        }
+        .wrapper {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrapper">
+{% for img, ans, exp in ques %}
+    {% if not img == "nan" %}
+        <div class="card bg-primary" style="width: 22rem;">
+          <div class="card-header">Question:</div>
+          <img class="card-img-top" src="{{ img }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Answer: {{ ans }}</h5>
+            <p class="card-text">{{ exp }}</p>
+          </div>
+        </div>
+    {% endif %}
+{% endfor %}
+</div>
+</body>
+</html>

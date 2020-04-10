@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Registration Form - Efkaries</title>
+
+    <!-- Icons font CSS-->
+    <link type="text/css" href="{% static 'material-design-iconic-font.min.css'%}" rel="stylesheet" media="all">
+    <link type="text/css" href="{% static 'font-awesome.min.css'%}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link type="text/css" href="{% static 'select2.min.css'%}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link type="text/css" href="{% static 'main.css'%}" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+{% block content %}
+
+{% endblock %}
+
+    <!-- Jquery JS-->
+    <script src="{% static 'jquery.min.js'%}"></script>
+    <!-- Vendor JS-->
+    <script src="{% static 'select2.min.js'%}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'global.js'%}"></script>
+
+</body>
+
+</html>
