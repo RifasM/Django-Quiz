@@ -7,21 +7,20 @@ from random import randint
 from registration.models import Register, Instructions
 from django.contrib.auth import logout
 from datetime import datetime, timedelta
-from quiz import settings
 
 col_list = ["question_image", "correct_answer", "explanation"]
 
-num_questions = int(Instructions.objects.get().num_questions)
-quiz_time = int(Instructions.objects.get().test_time)
-test_name = str(Instructions.objects.get().test_name)
-test_num = int(Instructions.objects.get().test_number)
+num_questions = int(Instructions.objects.get().num_questions) or 0
+quiz_time = int(Instructions.objects.get().test_time) or 0
+test_name = str(Instructions.objects.get().test_name) or "Default"
+test_num = int(Instructions.objects.get().test_number) or 1
 
 
 def get_questions(n, request):
     try:
-        questions = pd.read_csv("quiz.csv", encoding='windows-1252', usecols=col_list)["question_image"]
-        answers = pd.read_csv("quiz.csv", encoding='windows-1252', usecols=col_list)["correct_answer"]
-        explanation = pd.read_csv("quiz.csv", encoding='windows-1252', usecols=col_list)["explanation"]
+        questions = pd.read_csv("quiz"+str(test_num)+".csv", encoding='windows-1252', usecols=col_list)["question_image"]
+        answers = pd.read_csv("quiz"+str(test_num)+".csv", encoding='windows-1252', usecols=col_list)["correct_answer"]
+        explanation = pd.read_csv("quiz"+str(test_num)+".csv", encoding='windows-1252', usecols=col_list)["explanation"]
         question_list = []
         for i in range(n):
             rand_ques_num = randint(0, len(list(questions))//2)
@@ -186,3 +185,7 @@ def handler500(request):
     response = render(request, '500.html', context)
     response.status_code = 500
     return response
+
+
+def home(request):
+    return render(request, "index.html")

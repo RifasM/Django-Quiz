@@ -1,40 +1,20 @@
+{% extends 'base.html' %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Efkaries</title>
-      <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-    <style>
-        body{
-            padding: 10%;
-        }
-        .wrapper {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-gap: 10px;
-        }
-    </style>
-
-</head>
-<body>
-<div class="wrapper">
-{% for img, ans, exp in ques %}
-    {% if not img == "nan" %}
-        <div class="card bg-primary" style="width: 22rem;">
-          <div class="card-header">Question:</div>
-          <img class="card-img-top" src="{{ img }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Answer: {{ ans }}</h5>
-            <p class="card-text">{{ exp }}</p>
-          </div>
+{% block content %}
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Hey There,</h2>
+                          <h3 class="title">Efkaries Quiz</h3>
+                            <a href="{% url 'registration:login' %}" class="btn btn--green btn--pill">Sign In</a>
+                            <br><br><br>
+                            <a href="{% url 'registration:register' %}" class="btn btn--green btn--pill">Sign Up</a>
+                </div>
+            </div>
         </div>
-    {% endif %}
-{% endfor %}
-</div>
-</body>
-</html>
+    </div>
+{% endblock %}

@@ -22,6 +22,7 @@ app_name = 'quiz'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name="home"),
     url('', include('registration.urls', namespace="registration")),
     path('start', views.start, name="start"),
     path('test_start', views.test_start, name="test_start"),
