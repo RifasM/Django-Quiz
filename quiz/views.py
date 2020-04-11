@@ -12,11 +12,11 @@ from quiz import settings
 col_list = ["question_image", "correct_answer", "explanation"]
 
 num_questions = settings.NUM_OF_QUESTIONS
-quiz_time = settings.SESSION_COOKIE_AGE
+quiz_time = settings.TEST_TIME
 test_name = settings.TEST_NAME
 
 
-def get_questions(n):
+def get_questions(n, request):
     try:
         questions = pd.read_csv("quiz.csv", encoding='windows-1252', usecols=col_list)["question_image"]
         answers = pd.read_csv("quiz.csv", encoding='windows-1252', usecols=col_list)["correct_answer"]
@@ -36,7 +36,7 @@ def start(request):
     try:
         if request.method == "POST" and request.user.is_authenticated:
             username = request.user.get_full_name()
-            request.session['questions'] = get_questions(num_questions)
+            request.session['questions'] = get_questions(num_questions, request)
             request.session['qno'] = 0
             request.session['score'] = 0
             return render(request, 'instructions.html', {'user': username})
@@ -68,6 +68,7 @@ def next_ques(request):
             t = request.session['time']
             if ans == q[qno][1]:
                 request.session['score'] = s = s + 1
+                Register.objects.update(score1=s)
             global num_questions
             request.session['qno'] = qno = qno + 1
             if not qno == num_questions:
@@ -99,7 +100,7 @@ def skip_ques(request):
         if request.method == "POST" and request.user.is_authenticated:
             username = request.user.get_full_name()
             qno = int(request.session['qno'])
-            q = get_questions(1)
+            q = get_questions(1, request)
             s = int(request.session['score'])
             t = request.session['time']
             return render(request, 'quiz.html', {'user': username, 'ques': q[0][0], 'num': qno+1, 'score': s, 'time_left': t})

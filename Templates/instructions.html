@@ -14,7 +14,8 @@
         </div>
     </nav>
     <div class="row">
-        <h3 id="demo" class="card-header alert-success">
+        <div class="col-md-6 col-sm-4">
+            <h3 id="demo" class="badge-success" style="float: right;">
             <script>
                 $(document).ready(function() {
                   setTimeout(function() {
@@ -29,14 +30,15 @@
                 var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
                 var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((t % (1000 * 60)) / 1000);
-                document.getElementById("demo").innerHTML = "Your Test will start in: : "+days + "d "+ hours + "h " + minutes + "m " + seconds + "s ";
+                document.getElementById("demo").innerHTML = "Your Test will start in: "+ seconds + "s ";
                 if (t < 0) {
                   clearInterval(x);
-                  document.getElementById("demo").innerHTML = "EXPIRED";
+                  document.getElementById("demo").innerHTML = "All the best";
                 }
               }, 1000);
             </script>
           </h3>
+        </div>
     </div>
       <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
             <div class="card card-3">
