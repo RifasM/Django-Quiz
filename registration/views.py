@@ -20,7 +20,7 @@ def login(request):
             return render(request, 'dashboard.html', {"user": request.user.get_full_name(), "test_name": test_name})
         else:
             form = SignInForm()
-            return render(request, 'signin.html', {'form': form, "invalid": False})
+        return render(request, 'signin.html', {'form': form, "invalid": False})
     except Exception as e:
         form = SignInForm()
         return render(request, 'signin.html', {'form': form, "invalid": True})
@@ -31,6 +31,7 @@ def signup(request):
         if request.method == 'POST':
             form = SignUpForm(request.POST)
             if form.is_valid():
+                print(form)
                 form.save()
                 username = form.cleaned_data.get('username')
                 raw_password = form.cleaned_data.get('password1')
@@ -39,7 +40,7 @@ def signup(request):
                 return render(request, 'dashboard.html', {"user": request.user.get_full_name(), "test_name": test_name})
         else:
             form = SignUpForm()
-            return render(request, 'signup.html', {'form': form})
+        return render(request, 'signup.html', {'form': form})
     except Exception as e:
         return render(request, "error.html", {"user": "Anonymous Panda"})
 

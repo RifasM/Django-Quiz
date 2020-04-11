@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hgn9=uy%ky+yopk#q1ba^^fel0sy=5&=l8aj@fldrm04^l6^mr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -125,10 +125,4 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'collect_static')]
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
-SESSION_COOKIE_AGE = 5 * 60
-
-TEST_NAME = "Practise Test"
-
-TEST_TIME = 5
-
-NUM_OF_QUESTIONS = 2
+SESSION_COOKIE_AGE = 60 * 60

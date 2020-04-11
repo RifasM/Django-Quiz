@@ -7,7 +7,7 @@ from django.forms import PasswordInput
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'input--style-3', 'placeholder': 'Name'}), max_length=30, required=True, help_text='As required to be printed on certificate')
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'input--style-3', 'placeholder': 'USN'}), max_length=10, required=True, help_text='This will be your username')
-    email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'input--style-3', 'placeholder': 'Email'}), max_length=254, required=True, help_text='CMRIT email address only.')
+    email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'input--style-3', 'placeholder': 'Email', 'pattern': '.*@cmrit.ac.in'}), max_length=254, required=True, help_text='CMRIT email address only.')
 
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)

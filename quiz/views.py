@@ -4,16 +4,17 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 import pandas as pd
 from random import randint
-from registration.models import Register
+from registration.models import Register, Instructions
 from django.contrib.auth import logout
 from datetime import datetime, timedelta
 from quiz import settings
 
 col_list = ["question_image", "correct_answer", "explanation"]
 
-num_questions = settings.NUM_OF_QUESTIONS
-quiz_time = settings.TEST_TIME
-test_name = settings.TEST_NAME
+num_questions = int(Instructions.objects.get().num_questions)
+quiz_time = int(Instructions.objects.get().test_time)
+test_name = str(Instructions.objects.get().test_name)
+test_num = int(Instructions.objects.get().test_number)
 
 
 def get_questions(n, request):
@@ -68,7 +69,16 @@ def next_ques(request):
             t = request.session['time']
             if ans == q[qno][1]:
                 request.session['score'] = s = s + 1
-                Register.objects.update(score1=s)
+                """if test_num == 1:
+                    Register.objects.filter(usn=request.user.get_username()).update(score1=s)
+                elif test_num == 2:
+                    Register.objects.filter(usn=request.user.get_username()).update(score2=s)
+                elif test_num == 3:
+                    Register.objects.filter(usn=request.user.get_username()).update(score3=s)
+                elif test_num == 4:
+                    Register.objects.filter(usn=request.user.get_username()).update(score4=s)
+                elif test_num == 5:
+                    Register.objects.filter(usn=request.user.get_username()).update(score5=s)"""
             global num_questions
             request.session['qno'] = qno = qno + 1
             if not qno == num_questions:
@@ -82,15 +92,66 @@ def next_ques(request):
 def submit(request):
     try:
         if request.method == "POST" and request.user.is_authenticated:
-            try:
-                name = request.user.get_full_name()
-                usn = request.user.get_username()
-                email = request.user.get_email_field_name()
-                Register.objects.create(name=name, usn=usn, email=email, score1=int(request.session['score']))
+            usn = request.user.get_username()
+            name = request.user.get_full_name()
+            email = request.user.email
+
+            if test_num == 1:
+                try:
+                    if str(Register.objects.get(pk=usn)) == str(usn):
+                        if Register.objects.get(pk=usn).score1 == "":
+                            Register.objects.filter(pk=usn).update(score1=int(request.session['score']))
+                        else:
+                            return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                except Exception as e:
+                    Register.objects.create(name=name, usn=usn, email=email, score1=int(request.session['score']))
                 logout(request)
                 return render(request, 'thanks.html')
-            except Exception as e:
-                return render(request, 'responded.html', {"user": request.user.get_full_name()})
+            elif test_num == 2:
+                try:
+                    if str(Register.objects.get(pk=usn)) == str(usn):
+                        if Register.objects.get(pk=usn).score2 == "":
+                            Register.objects.filter(pk=usn).update(score2=int(request.session['score']))
+                        else:
+                            return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                except Exception as e:
+                    Register.objects.create(name=name, usn=usn, email=email, score2=int(request.session['score']))
+                logout(request)
+                return render(request, 'thanks.html')
+            elif test_num == 3:
+                try:
+                    if str(Register.objects.get(pk=usn)) == str(usn):
+                        if Register.objects.get(pk=usn).score3 == "":
+                            Register.objects.filter(pk=usn).update(score3=int(request.session['score']))
+                        else:
+                            return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                except Exception as e:
+                    Register.objects.create(name=name, usn=usn, email=email, score3=int(request.session['score']))
+                logout(request)
+                return render(request, 'thanks.html')
+            elif test_num == 4:
+                try:
+                    if str(Register.objects.get(pk=usn)) == str(usn):
+                        if Register.objects.get(pk=usn).score4 == "":
+                            Register.objects.filter(pk=usn).update(score4=int(request.session['score']))
+                        else:
+                            return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                except Exception as e:
+                    Register.objects.create(name=name, usn=usn, email=email, score4=int(request.session['score']))
+                logout(request)
+                return render(request, 'thanks.html')
+            elif test_num == 5:
+                try:
+                    if str(Register.objects.get(pk=usn)) == str(usn):
+                        if Register.objects.get(pk=usn).score5 == "":
+                            Register.objects.filter(pk=usn).update(score5=int(request.session['score']))
+                        else:
+                            return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                except Exception as e:
+                    Register.objects.create(name=name, usn=usn, email=email, score5=int(request.session['score']))
+                logout(request)
+                return render(request, 'thanks.html')
+
     except Exception as e:
         return render(request, "error.html", {"user": request.user.get_full_name()})
 
@@ -99,11 +160,16 @@ def skip_ques(request):
     try:
         if request.method == "POST" and request.user.is_authenticated:
             username = request.user.get_full_name()
+            q = list(request.session['questions'])
             qno = int(request.session['qno'])
-            q = get_questions(1, request)
             s = int(request.session['score'])
             t = request.session['time']
-            return render(request, 'quiz.html', {'user': username, 'ques': q[0][0], 'num': qno+1, 'score': s, 'time_left': t})
+            qno = qno + 1
+            if not qno == num_questions:
+                request.session['qno'] = qno
+                return render(request, 'quiz.html', {'user': username, 'ques': q[qno][0], 'num': qno+1, 'score': s, 'time_left': t})
+            else:
+                return render(request, 'complete.html', {'user': username, 'score': s})
     except Exception as e:
         return render(request, "error.html", {"user": request.user.get_full_name()})
 
