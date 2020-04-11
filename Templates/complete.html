@@ -3,6 +3,13 @@
 {% load static %}
 
 {% block content %}
+    <script>
+    $(document).ready(function() {
+                  setTimeout(function() {
+                    $("#go").trigger('click');
+                  }, 3000);
+                });
+    </script>
      <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
