@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login, logout
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -13,8 +14,9 @@ from quiz.views import test_name
 def login(request):
     try:
         if request.method == 'POST':
-            username = request.POST['username']
-            raw_password = request.POST['password']
+
+            username = request.POST["username"]
+            raw_password = request.POST["password"]
             user = authenticate(username=username, password=raw_password)
             auth_login(request, user)
             return render(request, 'dashboard.html', {"user": request.user.get_full_name(), "test_name": test_name})
@@ -36,6 +38,7 @@ def signup(request):
                 raw_password = form.cleaned_data.get('password1')
                 user = authenticate(username=username, password=raw_password)
                 auth_login(request, user)
+                User.objects.filter(username=username).update(email=username)
                 return render(request, 'dashboard.html', {"user": request.user.get_full_name(), "test_name": test_name})
         else:
             form = SignUpForm()

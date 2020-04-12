@@ -26,7 +26,7 @@ class SignUpForm(UserCreationForm):
 
 
 class SignInForm(AuthenticationForm):
-    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'input--style-3', 'placeholder': 'Email'}),
+    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'input--style-3', 'placeholder': 'Email', 'pattern': '[\w\.]{4}\d{2}\w{2}@cmrit.ac.in'}),
                                max_length=10, required=True)
 
     def __init__(self, *args, **kwargs):

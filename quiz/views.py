@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.template import RequestContext
 from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
@@ -7,6 +8,7 @@ from random import randint
 from registration.models import Register, Instructions
 from django.contrib.auth import logout
 from datetime import datetime, timedelta
+from quiz.settings import EMAIL_HOST_USER
 
 col_list = ["question_image", "correct_answer", "explanation"]
 
@@ -68,16 +70,6 @@ def next_ques(request):
             t = request.session['time']
             if ans == q[qno][1]:
                 request.session['score'] = s = s + 1
-                """if test_num == 1:
-                    Register.objects.filter(usn=request.user.get_username()).update(score1=s)
-                elif test_num == 2:
-                    Register.objects.filter(usn=request.user.get_username()).update(score2=s)
-                elif test_num == 3:
-                    Register.objects.filter(usn=request.user.get_username()).update(score3=s)
-                elif test_num == 4:
-                    Register.objects.filter(usn=request.user.get_username()).update(score4=s)
-                elif test_num == 5:
-                    Register.objects.filter(usn=request.user.get_username()).update(score5=s)"""
             global num_questions
             request.session['qno'] = qno = qno + 1
             if not qno == num_questions:
@@ -104,6 +96,7 @@ def submit(request):
                             return render(request, 'responded.html', {"user": request.user.get_full_name()})
                 except Exception as e:
                     Register.objects.create(name=name, usn=usn, email=email, score1=int(request.session['score']))
+                send_email(email, name, request.session['score'])
                 logout(request)
                 return render(request, 'thanks.html')
             elif test_num == 2:
@@ -115,6 +108,7 @@ def submit(request):
                             return render(request, 'responded.html', {"user": request.user.get_full_name()})
                 except Exception as e:
                     Register.objects.create(name=name, usn=usn, email=email, score2=int(request.session['score']))
+                send_email(email, name, request.session['score'])
                 logout(request)
                 return render(request, 'thanks.html')
             elif test_num == 3:
@@ -126,6 +120,7 @@ def submit(request):
                             return render(request, 'responded.html', {"user": request.user.get_full_name()})
                 except Exception as e:
                     Register.objects.create(name=name, usn=usn, email=email, score3=int(request.session['score']))
+                send_email(email, name, request.session['score'])
                 logout(request)
                 return render(request, 'thanks.html')
             elif test_num == 4:
@@ -137,6 +132,7 @@ def submit(request):
                             return render(request, 'responded.html', {"user": request.user.get_full_name()})
                 except Exception as e:
                     Register.objects.create(name=name, usn=usn, email=email, score4=int(request.session['score']))
+                send_email(email, name, request.session['score'])
                 logout(request)
                 return render(request, 'thanks.html')
             elif test_num == 5:
@@ -148,6 +144,7 @@ def submit(request):
                             return render(request, 'responded.html', {"user": request.user.get_full_name()})
                 except Exception as e:
                     Register.objects.create(name=name, usn=usn, email=email, score5=int(request.session['score']))
+                send_email(email, name, request.session['score'])
                 logout(request)
                 return render(request, 'thanks.html')
 
@@ -189,3 +186,25 @@ def handler500(request):
 
 def home(request):
     return render(request, "index.html")
+
+
+def send_email(email, name, score):
+    try:
+        subject = 'Thank Your for taking '+str(test_name)
+        message = 'Hey '+str(name) + \
+                  ",\n\nYou have successfully completed "+str(test_name) +\
+                  "\nYour score is: "+str(score) + \
+                  "\n\nWe will get back soon with the final results" \
+                  "\n\nThank You" \
+                  "\nTeam Efkairies"
+        send_mail(subject, message, EMAIL_HOST_USER, [str(email)], fail_silently=False)
+    except Exception as e:
+        print(e)
+        subject = 'Error sending email confirmation'
+        message = 'The User ' + str(name) + \
+                  ",\n\nHas successfully completed " + str(test_name) + \
+                  "\nHis/Her score is: " + str(score) + \
+                  "\n\nMail Timestamp: " + str(datetime.now().strftime("%H:%M:%S %d-%m-%Y ")) + \
+                  "\n\nThank You" \
+                  "\nTeam Efkairies"
+        send_mail(subject, message, EMAIL_HOST_USER, [EMAIL_HOST_USER], fail_silently=False)
