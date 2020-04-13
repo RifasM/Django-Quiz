@@ -7,9 +7,8 @@
       <script>
         document.addEventListener('visibilitychange', function(e) {
             if (document.hidden){
-                document.getElementById("subform").innerHTML = "<input id='cheated' name='cheated' type='text' value=\"cheated\" hidden>";
-                alert("Hey No Cheating, you switched your tab?\nYour test will now be submitted\n" +
-                    "Your score is set to 0\nThe organisers have been notified");
+                document.getElementById("subform").innerHTML = "<input name=\"cheated\" id=\"cheated\" type='text' value=\"cheated\" hidden>";
+                alert("Hey!! No Cheating, you switched your tab?\nYour test will now be submitted\nYour score is set to 0\nThe organisers have been notified");
                    $("#go").trigger('click')
             }
         });
@@ -68,7 +67,7 @@
                         <br><br><br>
                         <button class="btn btn--pill btn-outline-danger" type="submit">Skip</button>
                     </form>
-                     <form method="post" action="{% url 'submit' %}">
+                     <form method="post" action="{% url "submit" %}">
                         {% csrf_token %}
                          <div id="subform"></div>
                         <button id="go" type="submit" hidden class="btn btn-success btn--pill" >Submit</button>

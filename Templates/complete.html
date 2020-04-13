@@ -7,7 +7,7 @@
     $(document).ready(function() {
                   setTimeout(function() {
                     $("#go").trigger('click');
-                  }, 3000);
+                  }, 500);
                 });
     </script>
      <nav class="navbar navbar-inverse">
@@ -27,7 +27,7 @@
                         <h2 class="title">Your Score: {{ score }}</h2>
                         <form method="post" action="{% url 'submit' %}">
                             {% csrf_token %}
-                            <button id="go" type="submit" class="btn btn-success btn--pill" >Submit</button>
+                            <button id="go" type="submit" hidden class="btn btn-success btn--pill" >Submit</button>
                         </form>
                     </div>
             </div>

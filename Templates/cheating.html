@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Your Tab switch triggered this</h2>
+                          <h3 class="title">You were tracked leaving off this page, hence your score has been auto submitted to 0</h3>
+                    <a href="{% url 'home' %}" class="btn btn--green btn--pill">Go Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

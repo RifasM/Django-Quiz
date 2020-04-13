@@ -1,5 +1,7 @@
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage, send_mail
 from django.template import RequestContext
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
@@ -83,76 +85,101 @@ def next_ques(request):
 def submit(request):
     try:
         if request.method == "POST" and request.user.is_authenticated:
-            usn = request.user.get_username()
-            name = request.user.get_full_name()
             email = request.user.email
+            name = request.user.get_full_name()
 
-            if str(request.POST['cheated']) == "cheated":
-                send_email(email, name, 0, True)
-            else:
+            try:
+                usn = Register.objects.get(pk=email).usn
+            except:
+                usn = email
+
+            try:
+                if str(request.POST["cheated"]) == "cheated":
+                    try:
+                        send_email(email, name, request.session['score'], False, request)
+                    except:
+                        pass
+                    logout(request)
+                    return render(request, 'cheating.html')
+            except Exception as e:
                 if test_num == 1:
                     try:
-                        if str(Register.objects.get(pk=usn)) == str(usn):
-                            if Register.objects.get(pk=usn).score1 == "":
-                                Register.objects.filter(pk=usn).update(score1=int(request.session['score']))
+                        if str(Register.objects.get(pk=email)) == str(email):
+                            if Register.objects.get(pk=email).score1 == "":
+                                Register.objects.filter(pk=email).update(score1=int(request.session['score']))
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score1=int(request.session['score']))
-                    send_email(email, name, request.session['score'], False)
+                    try:
+                        send_email(email, name, request.session['score'], False, request)
+                    except:
+                        pass
                     logout(request)
                     return render(request, 'thanks.html')
                 elif test_num == 2:
                     try:
-                        if str(Register.objects.get(pk=usn)) == str(usn):
-                            if Register.objects.get(pk=usn).score2 == "":
-                                Register.objects.filter(pk=usn).update(score2=int(request.session['score']))
+                        if str(Register.objects.get(pk=email)) == str(email):
+                            if Register.objects.get(pk=email).score2 == "":
+                                Register.objects.filter(pk=email).update(score2=int(request.session['score']))
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score2=int(request.session['score']))
-                    send_email(email, name, request.session['score'], False)
+                    try:
+                        send_email(email, name, request.session['score'], False, request)
+                    except:
+                        pass
                     logout(request)
                     return render(request, 'thanks.html')
                 elif test_num == 3:
                     try:
-                        if str(Register.objects.get(pk=usn)) == str(usn):
-                            if Register.objects.get(pk=usn).score3 == "":
-                                Register.objects.filter(pk=usn).update(score3=int(request.session['score']))
+                        if str(Register.objects.get(pk=email)) == str(email):
+                            if Register.objects.get(pk=email).score3 == "":
+                                Register.objects.filter(pk=email).update(score3=int(request.session['score']))
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score3=int(request.session['score']))
-                    send_email(email, name, request.session['score'], False)
+                    try:
+                        send_email(email, name, request.session['score'], False, request)
+                    except:
+                        pass
                     logout(request)
                     return render(request, 'thanks.html')
                 elif test_num == 4:
                     try:
-                        if str(Register.objects.get(pk=usn)) == str(usn):
-                            if Register.objects.get(pk=usn).score4 == "":
-                                Register.objects.filter(pk=usn).update(score4=int(request.session['score']))
+                        if str(Register.objects.get(pk=email)) == str(email):
+                            if Register.objects.get(pk=email).score4 == "":
+                                Register.objects.filter(pk=email).update(score4=int(request.session['score']))
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score4=int(request.session['score']))
-                    send_email(email, name, request.session['score'], False)
+                    try:
+                        send_email(email, name, request.session['score'], False, request)
+                    except:
+                        pass
                     logout(request)
                     return render(request, 'thanks.html')
                 elif test_num == 5:
                     try:
-                        if str(Register.objects.get(pk=usn)) == str(usn):
-                            if Register.objects.get(pk=usn).score5 == "":
-                                Register.objects.filter(pk=usn).update(score5=int(request.session['score']))
+                        if str(Register.objects.get(pk=email)) == str(email):
+                            if Register.objects.get(pk=email).score5 == "":
+                                Register.objects.filter(pk=email).update(score5=int(request.session['score']))
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score5=int(request.session['score']))
-                    send_email(email, name, request.session['score'], False)
+                    try:
+                        send_email(email, name, request.session['score'], False, request)
+                    except:
+                        pass
                     logout(request)
                     return render(request, 'thanks.html')
 
     except Exception as e:
-        return render(request, "error.html", {"user": e})
+        return render(request, "error.html", {"user": request.user.get_full_name()})
 
 
 def skip_ques(request):
@@ -191,33 +218,37 @@ def home(request):
     return render(request, "index.html")
 
 
-def send_email(email, name, score, ch):
+def send_email(email, name, score, ch, questions):
     try:
         if not ch:
-            subject = 'Thank Your for taking '+str(test_name)
-            message = 'Hey '+str(name) + \
-                      ",\n\nYou have successfully completed "+str(test_name) +\
-                      "\nYour score is: "+str(score) + \
-                      "\n\nWe will get back soon with the final results" \
-                      "\n\nThank You" \
-                      "\nTeam Efkairies"
-            send_mail(subject, message, EMAIL_HOST_USER, [str(email)], fail_silently=False)
+            subject = 'Thank You for taking '+str(test_name)
+            html_message = render_to_string('email.html', {'user': name, 'score': score, 'test_name': test_name,
+                                                           'cheat': False, 'admin': False})
+            plain_message = strip_tags(html_message)
+            send_mail(subject, plain_message, "Efkairies CMRIT <"+EMAIL_HOST_USER+">", [str(email)], html_message=html_message)
+
+            subject = 'Result for User ' + str(name)
+            html_message = render_to_string('email.html',
+                                            {'user': name, 'score': score, 'test_name': test_name, 'cheat': False,
+                                             'admin': True, 'ques': list(questions.session['questions'])})
+            plain_message = strip_tags(html_message)
+            send_mail(subject, plain_message, "Efkairies CMRIT <" + EMAIL_HOST_USER + ">", [str(EMAIL_HOST_USER)], html_message=html_message)
         else:
-            subject = 'Thank Your for taking '+str(test_name)
-            message = 'Hey '+str(name) + \
-                      ",\n\nYou have not completed "+str(test_name) +\
-                      "\nYour score is set to: "+str(score) + \
-                      "\n\nYour Tab Switch was tagged" \
-                      "\n\nThank You" \
-                      "\nTeam Efkairies"
-            send_mail(subject, message, EMAIL_HOST_USER, [str(email), EMAIL_HOST_USER], fail_silently=False)
+            subject = 'Tab Switch Triggered for '+str(name)
+            html_message = render_to_string('email.html', {'user': name, 'score': score, 'test_name': test_name,
+                                                           'cheat': True, 'admin': False})
+            plain_message = strip_tags(html_message)
+            send_mail(subject, plain_message, "Efkairies CMRIT <" + EMAIL_HOST_USER + ">",  [str(email), str(EMAIL_HOST_USER)],
+                      html_message=html_message)
     except Exception as e:
-        print(e)
         subject = 'Error sending email confirmation'
-        message = 'The User ' + str(name) + \
-                  ",\n\nHas successfully completed " + str(test_name) + \
-                  "\nHis/Her score is: " + str(score) + \
-                  "\n\nMail Timestamp: " + str(datetime.now().strftime("%H:%M:%S %d-%m-%Y ")) + \
-                  "\n\nThank You" \
-                  "\nTeam Efkairies"
-        send_mail(subject, message, EMAIL_HOST_USER, [EMAIL_HOST_USER], fail_silently=False)
+        message = 'The User <strong>' + str(name) + \
+                  "</strong>,<br><br>Has successfully completed " + str(test_name) + \
+                  "<br>His/Her score is: " + str(score) + \
+                  "<br><br>Mail Timestamp: <code>" + str(datetime.now().strftime("%H:%M:%S %d-%m-%Y ")) + \
+                  "</code><br><br>Thank You" \
+                  "<br>Team Efkairies"
+        msg = EmailMessage(subject, message, "Efkairies CMRIT <" + EMAIL_HOST_USER + ">", [str(email)])
+        msg.content_subtype = "html"  # Main content is now text/html
+        msg.send()
+        # send_mail(subject, message, EMAIL_HOST_USER, [str(EMAIL_HOST_USER)], fail_silently=False)
