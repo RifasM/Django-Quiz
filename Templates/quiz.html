@@ -8,7 +8,7 @@
         document.addEventListener('visibilitychange', function(e) {
             if (document.hidden){
                 document.getElementById("subform").innerHTML = "<input name=\"cheated\" id=\"cheated\" type='text' value=\"cheated\" hidden>";
-                alert("Hey!! No Cheating, you switched your tab?\nYour test will now be submitted\nYour score is set to 0\nThe organisers have been notified");
+                alert("Hey!! No Cheating, you switched your tab?\nYour score is set to 0\nThe organisers have been notified");
                    $("#go").trigger('click')
             }
         });
@@ -59,6 +59,8 @@
                     <form method="post" action="{% url 'next_ques' %}">
                         {% csrf_token %}
                         <input class="input--style-3" type="text" name="answer" placeholder="Enter your answer here" required>
+                        <br><br>
+                        <h5 class="title"><strong>Remember, answers are case sensitive!</strong></h5>
                         <br><br>
                         <button class="btn btn--pill btn--green" type="submit">Submit</button>
                     </form>

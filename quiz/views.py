@@ -96,7 +96,7 @@ def submit(request):
             try:
                 if str(request.POST["cheated"]) == "cheated":
                     try:
-                        send_email(email, name, request.session['score'], False, request)
+                        send_email(email, name, request.session['score'], True, request)
                     except:
                         pass
                     logout(request)
