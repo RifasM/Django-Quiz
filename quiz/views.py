@@ -55,6 +55,19 @@ def test_start(request):
             qno = int(request.session['qno'])
             q = list(request.session['questions'])
             s = int(request.session['score'])
+            email = request.user.email
+
+            if not Register.objects.get(pk=email).score1 == "":
+                return render(request, 'responded.html', {"user": request.user.get_full_name()})
+            elif not Register.objects.get(pk=email).score2 == "":
+                return render(request, 'responded.html', {"user": request.user.get_full_name()})
+            elif not Register.objects.get(pk=email).score3 == "":
+                return render(request, 'responded.html', {"user": request.user.get_full_name()})
+            elif not Register.objects.get(pk=email).score4 == "":
+                return render(request, 'responded.html', {"user": request.user.get_full_name()})
+            elif not Register.objects.get(pk=email).score5 == "":
+                return render(request, 'responded.html', {"user": request.user.get_full_name()})
+
             request.session['time'] = t = (datetime.now() + timedelta(minutes=quiz_time)).strftime("%Y-%m-%d %H:%M:%S")
             return render(request, 'quiz.html', {'user': username, 'ques': q[qno][0], 'num': qno+1, 'score': s, 'time_left': t})
     except Exception as e:
@@ -107,14 +120,18 @@ def submit(request):
                         if str(Register.objects.get(pk=email)) == str(email):
                             if Register.objects.get(pk=email).score1 == "":
                                 Register.objects.filter(pk=email).update(score1=int(request.session['score']))
+                                try:
+                                    send_email(email, name, request.session['score'], False, request)
+                                except:
+                                    pass
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score1=int(request.session['score']))
-                    try:
-                        send_email(email, name, request.session['score'], False, request)
-                    except:
-                        pass
+                        try:
+                            send_email(email, name, request.session['score'], False, request)
+                        except:
+                            pass
                     logout(request)
                     return render(request, 'thanks.html')
                 elif test_num == 2:
@@ -122,14 +139,18 @@ def submit(request):
                         if str(Register.objects.get(pk=email)) == str(email):
                             if Register.objects.get(pk=email).score2 == "":
                                 Register.objects.filter(pk=email).update(score2=int(request.session['score']))
+                                try:
+                                    send_email(email, name, request.session['score'], False, request)
+                                except:
+                                    pass
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score2=int(request.session['score']))
-                    try:
-                        send_email(email, name, request.session['score'], False, request)
-                    except:
-                        pass
+                        try:
+                            send_email(email, name, request.session['score'], False, request)
+                        except:
+                            pass
                     logout(request)
                     return render(request, 'thanks.html')
                 elif test_num == 3:
@@ -137,14 +158,18 @@ def submit(request):
                         if str(Register.objects.get(pk=email)) == str(email):
                             if Register.objects.get(pk=email).score3 == "":
                                 Register.objects.filter(pk=email).update(score3=int(request.session['score']))
+                                try:
+                                    send_email(email, name, request.session['score'], False, request)
+                                except:
+                                    pass
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score3=int(request.session['score']))
-                    try:
-                        send_email(email, name, request.session['score'], False, request)
-                    except:
-                        pass
+                        try:
+                            send_email(email, name, request.session['score'], False, request)
+                        except:
+                            pass
                     logout(request)
                     return render(request, 'thanks.html')
                 elif test_num == 4:
@@ -152,14 +177,18 @@ def submit(request):
                         if str(Register.objects.get(pk=email)) == str(email):
                             if Register.objects.get(pk=email).score4 == "":
                                 Register.objects.filter(pk=email).update(score4=int(request.session['score']))
+                                try:
+                                    send_email(email, name, request.session['score'], False, request)
+                                except:
+                                    pass
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score4=int(request.session['score']))
-                    try:
-                        send_email(email, name, request.session['score'], False, request)
-                    except:
-                        pass
+                        try:
+                            send_email(email, name, request.session['score'], False, request)
+                        except:
+                            pass
                     logout(request)
                     return render(request, 'thanks.html')
                 elif test_num == 5:
@@ -167,14 +196,18 @@ def submit(request):
                         if str(Register.objects.get(pk=email)) == str(email):
                             if Register.objects.get(pk=email).score5 == "":
                                 Register.objects.filter(pk=email).update(score5=int(request.session['score']))
+                                try:
+                                    send_email(email, name, request.session['score'], False, request)
+                                except:
+                                    pass
                             else:
                                 return render(request, 'responded.html', {"user": request.user.get_full_name()})
                     except Exception as e:
                         Register.objects.create(name=name, usn=usn, email=email, score5=int(request.session['score']))
-                    try:
-                        send_email(email, name, request.session['score'], False, request)
-                    except:
-                        pass
+                        try:
+                            send_email(email, name, request.session['score'], False, request)
+                        except:
+                            pass
                     logout(request)
                     return render(request, 'thanks.html')
 
