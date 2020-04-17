@@ -292,51 +292,54 @@ def send_email(email, name, score, ch, questions):
 
 
 def result(pwd):
-    if re.findall('0x\w+', str(pwd))[0] == "0xbeepboop":
-        obj = Register.objects.all()
-        all = []
-        chart = []
-        for a in obj:
-            all.append([a.name, a.usn, a.score1, a.score2, a.score3, a.score4, a.score5])
-        if test_num == 1:
-            count = Register.objects.filter(score1__regex='\d+').count()
-            for i in range(len(all)):
-                if not all[i][2] == '':
-                    chart.append(int(all[i][2]))
-            # ab = Register.objects.aggregate(Sum('score1'))
-        elif test_num == 2:
-            count = Register.objects.filter(score2__regex='\d+').count()
-            for i in range(len(all)):
-                if not all[i][3] == '':
-                    chart.append(int(all[i][3]))
-        elif test_num == 3:
-            count = Register.objects.filter(score3__regex='\d+').count()
-            for i in range(len(all)):
-                if not all[i][4] == '':
-                    chart.append(int(all[i][4]))
-        elif test_num == 4:
-            count = Register.objects.filter(score4__regex='\d+').count()
-            for i in range(len(all)):
-                if not all[i][5] == '':
-                    chart.append(int(all[i][5]))
-        elif test_num == 5:
-            count = Register.objects.filter(score5__regex='\d+').count()
-            for i in range(len(all)):
-                if not all[i][6] == '':
-                    chart.append(int(all[i][6]))
+    try:
+        if re.findall('pwd=0x\w+', str(pwd))[0] == "pwd=0xbeepboop":
+            obj = Register.objects.all()
+            all = []
+            chart = []
+            for a in obj:
+                all.append([a.name, a.usn, a.score1, a.score2, a.score3, a.score4, a.score5])
+            if test_num == 1:
+                count = Register.objects.filter(score1__regex='\d+').count()
+                for i in range(len(all)):
+                    if not all[i][2] == '':
+                        chart.append(int(all[i][2]))
+                # ab = Register.objects.aggregate(Sum('score1'))
+            elif test_num == 2:
+                count = Register.objects.filter(score2__regex='\d+').count()
+                for i in range(len(all)):
+                    if not all[i][3] == '':
+                        chart.append(int(all[i][3]))
+            elif test_num == 3:
+                count = Register.objects.filter(score3__regex='\d+').count()
+                for i in range(len(all)):
+                    if not all[i][4] == '':
+                        chart.append(int(all[i][4]))
+            elif test_num == 4:
+                count = Register.objects.filter(score4__regex='\d+').count()
+                for i in range(len(all)):
+                    if not all[i][5] == '':
+                        chart.append(int(all[i][5]))
+            elif test_num == 5:
+                count = Register.objects.filter(score5__regex='\d+').count()
+                for i in range(len(all)):
+                    if not all[i][6] == '':
+                        chart.append(int(all[i][6]))
 
-        dm = Counter(chart)
-        dictOfMarks = {}
-        for i in sorted(dm):
-            dictOfMarks[i] = dm[i]
+            dm = Counter(chart)
+            dictOfMarks = {}
+            for i in sorted(dm):
+                dictOfMarks[i] = dm[i]
 
-        # results = zip(obj.values('name'), obj.values('usn'), obj.values('score1'), obj.values('score2'), obj.values('score3'), obj.values('score4'), obj.values('score5'))
-        return render(pwd, "result.html", {'results': all,
-                                           'test_name': test_name,
-                                           'num_reg': Register.objects.count(),
-                                           'sub': count,
-                                           'val': (count/Register.objects.count())*100,
-                                           'values': str(dictOfMarks.values())[12:-1],
-                                           'axis': str(dictOfMarks.keys())[10:-1]})
-    else:
-        return render(pwd, '404.html')
+            # results = zip(obj.values('name'), obj.values('usn'), obj.values('score1'), obj.values('score2'), obj.values('score3'), obj.values('score4'), obj.values('score5'))
+            return render(pwd, "result.html", {'results': all,
+                                               'test_name': test_name,
+                                               'num_reg': Register.objects.count(),
+                                               'sub': count,
+                                               'val': (count/Register.objects.count())*100,
+                                               'values': str(dictOfMarks.values())[12:-1],
+                                               'axis': str(dictOfMarks.keys())[10:-1]})
+        else:
+            return render(pwd, '404.html')
+    except Exception as e:
+        return render(pwd, "404.html")
