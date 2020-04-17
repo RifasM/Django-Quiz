@@ -299,28 +299,28 @@ def result(pwd):
         for a in obj:
             all.append([a.name, a.usn, a.score1, a.score2, a.score3, a.score4, a.score5])
         if test_num == 1:
-            count = Register.objects.filter(score1__isnull=False).count()
+            count = Register.objects.filter(score1__regex='\d+').count()
             for i in range(len(all)):
                 if not all[i][2] == '':
                     chart.append(int(all[i][2]))
             # ab = Register.objects.aggregate(Sum('score1'))
         elif test_num == 2:
-            count = Register.objects.filter(score2__isnull=False).count()
+            count = Register.objects.filter(score2__regex='\d+').count()
             for i in range(len(all)):
                 if not all[i][3] == '':
                     chart.append(int(all[i][3]))
         elif test_num == 3:
-            count = Register.objects.filter(score3__isnull=False).count()
+            count = Register.objects.filter(score3__regex='\d+').count()
             for i in range(len(all)):
                 if not all[i][4] == '':
                     chart.append(int(all[i][4]))
         elif test_num == 4:
-            count = Register.objects.filter(score4__isnull=False).count()
+            count = Register.objects.filter(score4__regex='\d+').count()
             for i in range(len(all)):
                 if not all[i][5] == '':
                     chart.append(int(all[i][5]))
         elif test_num == 5:
-            count = Register.objects.filter(score5__isnull=False).count()
+            count = Register.objects.filter(score5__regex='\d+').count()
             for i in range(len(all)):
                 if not all[i][6] == '':
                     chart.append(int(all[i][6]))
