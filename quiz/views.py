@@ -1,4 +1,5 @@
 from django.core.mail import EmailMessage, send_mail
+from django.db.models import Sum
 from django.template import RequestContext
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
@@ -9,8 +10,11 @@ import pandas as pd
 from random import randint
 from registration.models import Register, Instructions
 from django.contrib.auth import logout
+from django.contrib.auth.models import User
 from datetime import datetime, timedelta
 from quiz.settings import EMAIL_HOST_USER
+import re
+from collections import Counter
 
 col_list = ["question_image", "correct_answer", "explanation"]
 
@@ -285,3 +289,49 @@ def send_email(email, name, score, ch, questions):
         msg.content_subtype = "html"  # Main content is now text/html
         msg.send()
         # send_mail(subject, message, EMAIL_HOST_USER, [str(EMAIL_HOST_USER)], fail_silently=False)
+
+
+def result(pwd):
+    if re.findall('0x\w+', str(pwd))[0] == "0xbeepboop":
+        obj = Register.objects.all()
+        all = []
+        chart = []
+        for a in obj:
+            all.append([a.name, a.usn, a.score1, a.score2, a.score3, a.score4, a.score5])
+        if test_num == 1:
+            count = Register.objects.filter(score1__isnull=False).count()
+            for i in range(len(all)):
+                chart.append(int(all[i][2]))
+            # ab = Register.objects.aggregate(Sum('score1'))
+        elif test_num == 2:
+            count = Register.objects.filter(score2__isnull=False).count()
+            for i in range(len(all)):
+                chart.append(int(all[i][3]))
+        elif test_num == 3:
+            count = Register.objects.filter(score3__isnull=False).count()
+            for i in range(len(all)):
+                chart.append(int(all[i][4]))
+        elif test_num == 4:
+            count = Register.objects.filter(score4__isnull=False).count()
+            for i in range(len(all)):
+                chart.append(int(all[i][5]))
+        elif test_num == 5:
+            count = Register.objects.filter(score5__isnull=False).count()
+            for i in range(len(all)):
+                chart.append(int(all[i][6]))
+
+        dm = Counter(chart)
+        dictOfMarks = {}
+        for i in sorted(dm):
+            dictOfMarks[i] = dm[i]
+
+        # results = zip(obj.values('name'), obj.values('usn'), obj.values('score1'), obj.values('score2'), obj.values('score3'), obj.values('score4'), obj.values('score5'))
+        return render(pwd, "result.html", {'results': all,
+                                           'test_name': test_name,
+                                           'num_reg': Register.objects.count(),
+                                           'sub': count,
+                                           'val': (count/Register.objects.count())*100,
+                                           'values': str(dictOfMarks.values())[12:-1],
+                                           'axis': str(dictOfMarks.keys())[10:-1]})
+    else:
+        return render(pwd, '404.html')
