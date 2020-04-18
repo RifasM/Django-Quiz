@@ -278,20 +278,20 @@ def send_email(email, name, score, ch, questions):
         if not ch:
             subject = 'Thank You for taking '+str(test_name)
             html_message = render_to_string('email.html', {'user': name, 'score': score, 'test_name': test_name,
-                                                           'cheat': False, 'admin': False})
+                                                           'cheat': False, 'admin': False, 'num': num_questions})
             plain_message = strip_tags(html_message)
             send_mail(subject, plain_message, "Efkairies CMRIT <"+EMAIL_HOST_USER+">", [str(email)], html_message=html_message)
 
             subject = 'Result for User ' + str(name)
             html_message = render_to_string('email.html',
                                             {'user': name, 'score': score, 'test_name': test_name, 'cheat': False,
-                                             'admin': True, 'ques': list(questions.session['questions'])})
+                                             'admin': True, 'ques': list(questions.session['questions']), 'num': num_questions})
             plain_message = strip_tags(html_message)
             send_mail(subject, plain_message, "Efkairies CMRIT <" + EMAIL_HOST_USER + ">", [str(EMAIL_HOST_USER)], html_message=html_message)
         else:
             subject = 'Tab Switch Triggered for '+str(name)
             html_message = render_to_string('email.html', {'user': name, 'score': score, 'test_name': test_name,
-                                                           'cheat': True, 'admin': False})
+                                                           'cheat': True, 'admin': False, 'num': num_questions})
             plain_message = strip_tags(html_message)
             send_mail(subject, plain_message, "Efkairies CMRIT <" + EMAIL_HOST_USER + ">",  [str(email), str(EMAIL_HOST_USER)],
                       html_message=html_message)
@@ -303,9 +303,10 @@ def send_email(email, name, score, ch, questions):
                   "<br><br>Mail Timestamp: <code>" + str(datetime.now().strftime("%H:%M:%S %d-%m-%Y ")) + \
                   "</code><br><br>Thank You" \
                   "<br>Team Efkairies"
-        msg = EmailMessage(subject, message, "Efkairies CMRIT <" + EMAIL_HOST_USER + ">", [str(email)])
+        msg = EmailMessage(subject, message, "Efkairies CMRIT <" + EMAIL_HOST_USER + ">", [str(email), str(EMAIL_HOST_USER)])
         msg.content_subtype = "html"  # Main content is now text/html
         msg.send()
+        print(e)
         # send_mail(subject, message, EMAIL_HOST_USER, [str(EMAIL_HOST_USER)], fail_silently=False)
 
 
