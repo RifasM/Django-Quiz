@@ -39,7 +39,7 @@ def signup(request):
                 raw_password = form.cleaned_data.get('password1')
                 usn = form.cleaned_data.get('usn')
                 name = form.cleaned_data.get('first_name')
-                Register.objects.create(name=name, usn=str(usn).upper, pk=username)
+                Register.objects.create(name=name, usn=str(usn).upper(), pk=username)
                 user = authenticate(username=username, password=raw_password)
                 auth_login(request, user)
                 User.objects.filter(username=username).update(email=username)

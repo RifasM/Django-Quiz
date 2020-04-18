@@ -29,9 +29,12 @@ def get_questions(n, request):
         questions = pd.read_csv("quiz"+str(test_num)+".csv", encoding='windows-1252', usecols=col_list)["question_image"]
         answers = pd.read_csv("quiz"+str(test_num)+".csv", encoding='windows-1252', usecols=col_list)["correct_answer"]
         explanation = pd.read_csv("quiz"+str(test_num)+".csv", encoding='windows-1252', usecols=col_list)["explanation"]
+        questions = questions.dropna()
+        answers = answers.dropna()
+        explanation = explanation.dropna()
         question_list = []
         for i in range(n):
-            rand_ques_num = randint(0, len(list(questions))//2)
+            rand_ques_num = randint(0, len(list(questions))-1)
             question_list.append([list(questions)[rand_ques_num], list(answers)[rand_ques_num], list(explanation)[rand_ques_num]])
         # list_of_questions = zip(list(questions), list(answers), list(explanation))
         # return render(request, "index.html", {'ques': list_of_questions})
@@ -61,16 +64,31 @@ def test_start(request):
             s = int(request.session['score'])
             email = request.user.email
 
-            if not Register.objects.get(pk=email).score1 == "":
-                return render(request, 'responded.html', {"user": request.user.get_full_name()})
-            elif not Register.objects.get(pk=email).score2 == "":
-                return render(request, 'responded.html', {"user": request.user.get_full_name()})
-            elif not Register.objects.get(pk=email).score3 == "":
-                return render(request, 'responded.html', {"user": request.user.get_full_name()})
-            elif not Register.objects.get(pk=email).score4 == "":
-                return render(request, 'responded.html', {"user": request.user.get_full_name()})
-            elif not Register.objects.get(pk=email).score5 == "":
-                return render(request, 'responded.html', {"user": request.user.get_full_name()})
+            if test_num == 1:
+                if not Register.objects.get(pk=email).score1 == "":
+                    return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                else:
+                    Register.objects.filter(pk=email).update(score1=0)
+            elif test_num == 2:
+                if not Register.objects.get(pk=email).score2 == "":
+                    return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                else:
+                    Register.objects.filter(pk=email).update(score2=0)
+            elif test_num == 3:
+                if not Register.objects.get(pk=email).score3 == "":
+                    return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                else:
+                    Register.objects.filter(pk=email).update(score3=0)
+            elif test_num == 4:
+                if not Register.objects.get(pk=email).score4 == "":
+                    return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                else:
+                    Register.objects.filter(pk=email).update(score4=0)
+            elif test_num == 5 :
+                if not Register.objects.get(pk=email).score5 == "":
+                    return render(request, 'responded.html', {"user": request.user.get_full_name()})
+                else:
+                    Register.objects.filter(pk=email).update(score5=0)
 
             request.session['time'] = t = (datetime.now() + timedelta(minutes=quiz_time)).strftime("%Y-%m-%d %H:%M:%S")
             return render(request, 'quiz.html', {'user': username, 'ques': q[qno][0], 'num': qno+1, 'score': s, 'time_left': t})
@@ -122,7 +140,7 @@ def submit(request):
                 if test_num == 1:
                     try:
                         if str(Register.objects.get(pk=email)) == str(email):
-                            if Register.objects.get(pk=email).score1 == "":
+                            if Register.objects.get(pk=email).score1 == "0" or 0:
                                 Register.objects.filter(pk=email).update(score1=int(request.session['score']))
                                 try:
                                     send_email(email, name, request.session['score'], False, request)
@@ -141,7 +159,7 @@ def submit(request):
                 elif test_num == 2:
                     try:
                         if str(Register.objects.get(pk=email)) == str(email):
-                            if Register.objects.get(pk=email).score2 == "":
+                            if Register.objects.get(pk=email).score2 == "0" or 0:
                                 Register.objects.filter(pk=email).update(score2=int(request.session['score']))
                                 try:
                                     send_email(email, name, request.session['score'], False, request)
@@ -160,7 +178,7 @@ def submit(request):
                 elif test_num == 3:
                     try:
                         if str(Register.objects.get(pk=email)) == str(email):
-                            if Register.objects.get(pk=email).score3 == "":
+                            if Register.objects.get(pk=email).score3 == "0" or 0:
                                 Register.objects.filter(pk=email).update(score3=int(request.session['score']))
                                 try:
                                     send_email(email, name, request.session['score'], False, request)
@@ -179,7 +197,7 @@ def submit(request):
                 elif test_num == 4:
                     try:
                         if str(Register.objects.get(pk=email)) == str(email):
-                            if Register.objects.get(pk=email).score4 == "":
+                            if Register.objects.get(pk=email).score4 == "0" or 0:
                                 Register.objects.filter(pk=email).update(score4=int(request.session['score']))
                                 try:
                                     send_email(email, name, request.session['score'], False, request)
@@ -198,7 +216,7 @@ def submit(request):
                 elif test_num == 5:
                     try:
                         if str(Register.objects.get(pk=email)) == str(email):
-                            if Register.objects.get(pk=email).score5 == "":
+                            if Register.objects.get(pk=email).score5 == "0" or 0:
                                 Register.objects.filter(pk=email).update(score5=int(request.session['score']))
                                 try:
                                     send_email(email, name, request.session['score'], False, request)
