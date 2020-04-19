@@ -22,7 +22,7 @@
                     $("#go").trigger('click');
                   }, 20000);
                 });
-              var deadline = new Date().getTime()+30000;
+              var deadline = new Date().getTime()+60000;
               var x = setInterval(function() {
                 var now = new Date().getTime();
                 var t = deadline - now;
@@ -43,19 +43,20 @@
       <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
             <div class="card card-3">
                 <div class="card-heading">
-                    <ul style="padding: 15%; font-size: 130%;">
-                        <li><strong>Do not refresh or press the back button</strong></li>
+                    <ul style="padding: 15%; font-size: 130%; color: #000000;">
+                        <li><strong>Do not refresh or navigate back to the previous question</strong></li>
                         <li>This test is for {{ time }} minutes after which you will be logged out automatically.</li>
-                        <li>The answers are case sensitive, so check your answer before you submit.</li>
+                        <li>The answers are in <strong>CAPITALS</strong>, so check your answer before you submit.</li>
+                        <li>Certain answers might expect you to type it out as a word, again in <strong>CAPITALS</strong></li>
                         <li>Feel free to hit the skip button if you find a question difficult, there will be no loss of marks.</li>
                         <li>This test will auto submit after the time is up.</li>
                     </ul>
                 </div>
                 <div class="card-body">
-                    <h2 class="title">Instructions For the test</h2>
+                    <h2 class="title" style="color:#000;">Instructions For the test</h2>
                     <form method="post" action="{% url 'test_start' %}">
                         {% csrf_token %}
-                        <button id="go" type="submit" class="btn btn-success btn--pill" >All the best</button>
+                        <button id="go" type="submit" class="btn btn-outline-info btn--pill" style="color:#000;">All the best</button>
                     </form>
                 </div>
             </div>

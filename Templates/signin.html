@@ -19,9 +19,9 @@
                             {% csrf_token %}
                             {{ form.as_p }}
                               <br><br>
-                            <button class="btn btn--pill btn--green" type="submit">Sign In</button>
+                            <button class="btn btn--pill btn-outline-info " style="color:#000;" type="submit">Sign In</button>
                               <br><br>
-                          <a class="btn btn--pill btn--green" style="text-decoration: None;" href="{% url 'registration:register' %}">Sign Up</a>
+                          <a class="btn btn--pill btn-outline-info " style="color:#000; text-decoration: None;" href="{% url 'registration:register' %}">Sign Up</a>
                           </form>
                 </div>
             </div>

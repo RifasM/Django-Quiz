@@ -60,19 +60,19 @@
                         {% csrf_token %}
                         <input class="input--style-3" type="text" name="answer" placeholder="Enter your answer here" required>
                         <br><br>
-                        <h5 class="title"><strong>Remember, answers are case sensitive!</strong></h5>
+                        <h6 class="title"><strong>Fill in your answers as capital</strong></h6>
                         <br><br>
-                        <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                        <button class="btn btn--pill btn-outline-info" style="color:#000;" type="submit">Submit</button>
                     </form>
                     <form method="post" action="{% url 'skip' %}">
                         {% csrf_token %}
                         <br><br><br>
-                        <button class="btn btn--pill btn-outline-danger" type="submit">Skip</button>
+                        <button class="btn btn--pill btn-outline-danger" style="color: #000;" type="submit">Skip</button>
                     </form>
                      <form method="post" action="{% url "submit" %}">
                         {% csrf_token %}
                          <div id="subform"></div>
-                        <button id="go" type="submit" hidden class="btn btn-success btn--pill" >Submit</button>
+                        <button id="go" type="submit" hidden class="btn btn-outline-info btn--pill" >Submit</button>
                     </form>
                 </div>
             </div>

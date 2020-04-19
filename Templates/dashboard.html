@@ -13,14 +13,14 @@
             </div>
         </div>
     </nav>
-      <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+      <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins" style="padding-top: 10%">
             <div class="card card-3">
                 <div class="card-heading"></div>
                     <div class="card-body">
                         <h2 class="title">Welcome to the {{ test_name }}</h2>
                         <form method="post" action="{% url 'start' %}">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn--green btn--pill" >Take the Test</button>
+                            <button type="submit" class="btn btn-outline-info btn--pill" style="color:#000;">Take the Test</button>
                         </form>
                     </div>
             </div>
