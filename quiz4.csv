@@ -1,32 +1,237 @@
-question_image,correct_answer,explanation
-https://www.indiabix.com/_files/images/puzzles/10-1-q-2.png,5:19,"Starting with the watch on the left, add 42 minutes to the time shown to give the time on the next watch to the right."
-https://www.indiabix.com/_files/images/puzzles/10-1-q-16.png,Hand pointing to 5,"Starting with the top clock and moving anti-clockwise around the others, the hour hand moves back 1 hour, then 2, then 3 etc, while the minute hand moves forward 10 minutes each time."
-https://www.indiabix.com/_files/images/puzzles/10-3-q-16.png,9 of Clubs,"Taking red cards as positive values and black cards as negative values, in each column of the diagram, the lower card value equals the sum of the two upper card values. The suits are used  alternately in each column."
-https://www.indiabix.com/_files/images/puzzles/10-3-q-19.png,To the 4,"Start with the top left clockface, and move around the others in a clockwise direction. The value pointed to by the hour hand equals the value pointed to by the minute hand, subtracting 4 for the first clockface, 5 for the next, then 6 etc."
-https://www.indiabix.com/_files/images/puzzles/10-5-q-2.png,5:23,The sum of the separate digits on each watch increases by 2 as you move to the right.
-https://www.indiabix.com/_files/images/puzzles/10-19-q-2.png,3:36,"On each watch, the time shown contains two digits that are the same."
-https://www.indiabix.com/_files/images/puzzles/10-19-q-16.png,To the 8,"Start with the top clockface and move clockwise around the others. The sum of the numbers pointed to by the 2 hands follows the sequence 5, 10, 15, 20."
-https://www.indiabix.com/_files/images/puzzles/10-7-q-2.png,7:05,"As you move from left to right, the time shown on each watch decreases by 12 minutes, then 24, 36 and 48."
-https://www.indiabix.com/_files/images/puzzles/10-7-q-16.png,Hour hand points to 8,"Starting with the top clockface, and moving clockwise around the others, the minute hand moves forward 15 minutes, while the hour hand moves back 2 hours each time."
-https://www.indiabix.com/_files/images/puzzles/10-5-q-16.png,Hour hand is pointing to 2.,Multiply the hour hand value by 2 and add the minute hand value. This  total is always 15.
-https://www.indiabix.com/_files/images/puzzles/10-6-q-19.png,Five minutes to Ten,"Start with the top left clockface, and move around the others clockwise. The minute hand moves backwards by 15 minutes, then 20, then 25 etc, while the hour hand moves forward 2 hours, then 3, then 4 etc."
-https://www.indiabix.com/_files/images/puzzles/10-18-q-16.png,Nine of Clubs,"In each column of the diagram, add the top and bottom card values together and subtract 2 to give the value of the central card."
-https://www.indiabix.com/_files/images/puzzles/10-15-q-19.png,To the 2,"Starting with the top left clockface and moving clockwise around the others, the minute hand moves back 2 places, then 4, 6 and 8, while the hour hand moves forward 2 places, then 4, 6 and 8."
-https://www.indiabix.com/_files/images/puzzles/10-17-q-2.png,6:45,"As you move from left to right, add 1 to the value of each digit on the watch, and rotate the digits one place to the left."
-https://www.indiabix.com/_files/images/puzzles/10-9-q-19.png,To the 5,"Start with the top left clockface, and move around the others in a clockwise direction. The sum of the numbers pointed to by the hour and minute hand follows the sequence 14, 15, 16, 17 and 18."
-https://www.indiabix.com/_files/images/puzzles/10-11-q-2.png,6:20,"On each watch, the sum of the digits shown equals 8."
-https://www.indiabix.com/_files/images/puzzles/10-14-q-3.png,To the 4,The sum of the numbers pointed to by the hour and minute hands is always 11.
-https://www.indiabix.com/_files/images/puzzles/10-14-q-28.png,6:06,"Start with the watch on the left and move to the right. The time on the watches increases by 2 hours 3 min- utes, then decreases by 1 hour 16 min- utes, alternately."
-https://www.indiabix.com/_files/images/puzzles/10-11-q-16.png,The hour hand points to the 4.,The sum of the values pointed to by the hands on each clock equals 12.
-https://www.indiabix.com/_files/images/puzzles/10-12-q-19.png,To the 6,"Starting with the top left clockface and working clockwise around the others, the sum of the numbers pointed to by the 2 hands starts at 3 and increases by 2 each time."
-https://www.indiabix.com/_files/images/puzzles/10-15-q-16.png,3 of SpadeS,"Divide the diagram in half, vertically. In each half, start at the top left card and move to the right, then down one row and to the left, and finally to the right, in a snakes and ladders pattern. The value of the cards in the left hand half increase alternately by 3 and 4, and the value of the cards in the right hand half increase alternately by 4 and 5. To calculate the suit of each card, start at the top left of the whole diagram and move down, then to the right one space and upwards etc. in a snakes and ladders pattern. Suits are written in order, following this path, starting with Hearts, then Clubs, Diamonds and Spades."
-https://www.indiabix.com/_files/images/puzzles/10-12-q-16.png,Jack of SpadeS,"There are 2 sequences in the grid - one determining the value of the card, and one determining the suit of the card. Starting on the top left and moving right, then down one row and to the left, then down the final row and to the right, cards are arranged in order, with their value increasing by 4 each time. To calculate the suit of each card, start on the top left and move down, then right one row and move up etc. cards are arranged in the order Hearts, Clubs, Diamonds, Spades."
-https://www.indiabix.com/_files/images/puzzles/10-9-q-16.png,7 (any suit),"Taking the value of Aces as 1 and all court cards as 10, In each column of the diagram, the value of the sum of the 3 cards is always 21."
-https://www.indiabix.com/_files/images/puzzles/10-6-q-16.png,King of Clubs,"Start at the top left of the diagram and move to the right, then down one row and to the left etc. in a snakes and ladders pattern. The value of each card increases by 5 each time, with their suit following the sequence of hearts, clubs, diamonds and spades."
-https://www.indiabix.com/_files/images/puzzles/10-13-q-2.png,11:01,"Taking the hour and minute values on each watch separately, as you move to the right the hour value increases by 1, 2, 3 and 4, and the minute value decreases by 11, 22, 33 and 44."
-https://www.indiabix.com/_files/images/puzzles/10-13-q-16.png,Minute hand pointing to 6,"Starting with the top clockface and moving clockwise around the others, the hour hand moves forward by 1 hour, then 2, then 3, while the minute hand moves forward 10 minutes, then 20, then 30."
-https://www.indiabix.com/_files/images/puzzles/10-1-q-2.png,5:19,"Starting with the watch on the left, add 42 minutes to the time shown to give the time on the next watch to the right."
-https://www.indiabix.com/_files/images/puzzles/10-1-q-16.png,Hand pointing to 5,"Starting with the top clock and moving anti-clockwise around the others, the hour hand moves back 1 hour, then 2, then 3 etc, while the minute hand moves forward 10 minutes each time."
-https://www.indiabix.com/_files/images/puzzles/10-17-q-16.png,To the 4,"Starting with the top clockface and moving clockwise around the others, the minute hand points to the value 3 less than that pointed to by the hour hand. Repeat for the other clockfaces, subtracting 4, 5 and 6 from the hour hand values."
-https://www.indiabix.com/_files/images/puzzles/10-18-q-19.png,To the 5,"Start with the top left clockface and move clockwise around the others. The sum of the numbers pointed to by the hour and minute hand follows the sequence 3, 6, 9, 12 and 15."
-https://www.indiabix.com/_files/images/puzzles/10-3-q-16.png,9 of Clubs,"Taking red cards as positive values and black cards as negative values, in each column of the diagram, the lower card value equals the sum of the two upper card values. The suits are used  alternately in each column."
+question_image,correct_answer,explanation
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-9.png,M,"Working in rows, add together the numerical values of the left and right hand letters to give the numerical value of the central letter."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-10.png,O,"In each segment of the diagram are a pair of letters, one of which is the same distance from the start of the alphabet as the other is from the end."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-14.png,K,The numerical values of the letters in opposite segments of the circle always add up to 17.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-18.png,K,"As you move down, the numerical value of the letters follows the sequence of Prime Numbers."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-22.png,A,"Writing each letter as its numerical value and working in rows, add the top 2 digit number to the bottom 2 digit number to give the 3 digit result in the centre."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-24.png,G,The numerical values of the letters in each row add up to 26 each time.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-25.png,W,"Starting at the top left and moving down, then right one column and up etc in a snakes and ladders pattern, letters move through the alphabet 4 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-30.png,B,"In each row, add the numerical value of the left and right hand letters together and write the letter with the reverse alphabetical value in the centre."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-1.png,T,"Starting at F and moving anti-clockwise, letters move through the alphabet in steps of 2, 3, 4, 5 etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-9.png,M,"Working in rows, add together the numerical values of the left and right hand letters to give the numerical value of the central letter."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-10.png,O,"In each segment of the diagram are a pair of letters, one of which is the same distance from the start of the alphabet as the other is from the end."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-14.png,K,The numerical values of the letters in opposite segments of the circle always add up to 17.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-6.png,P,"Starting at the top left circle, and moving right, then down one row and moving left,  in a snakes and ladders pattern, letters move through the alphabet in steps of 2, 3 and 4, repeating this pattern all the way down."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-11.png,1,"Working from left to right, letters in corresponding segments of the circles move through the alphabet in steps of 2, 3 and 4, with their relative positions moving one place clockwise at each step."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-13.png,V,"Starting at the top left, and moving anti-clockwise around the figure, letters advance through the alphabet 5 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-17.png,E,"Using the numerical value of each letter, in each column, the value of the central letter equals the sum of the values of the top and bottom letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-20.png,N,"The alphabetical value of the letters in the left hand column follows through the sequence of Prime Numbers, with the letters in the right hand column representing the corresponding reverse alphabetical values."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-21.png,I,"Starting on the left, and moving downwards in columns from left to right, letters are written in alphabetical sequence, in steps of 4 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-23.png,B,"In each diagram, letters are written in sequence, starting in the top left circle and moving clockwise around the other 3 outer circles, in steps given by the numerical value of the central letter each time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-25.png,U,"Starting on the left, and moving along the line to the right, letters follow the alphabetic sequence, in steps of 1,2,3 and then 4, before repeating the sequence."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-28.png,2,"Splitting the large square into quarters, each quarter features the same pattern of letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-29.png,Y,"Starting in the top left circle, and following a W pattern through the others, letters in corresponding segments of the circles follow the alphabetical sequence in steps of 4 letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-30.png,W,"Working from left to right, letters move forwards 7 places, then back 2. Repeat this sequence until the end."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-4.png,K,"In each row, the product of the left and right hand numbers equals the sum of the numerical values of the three letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-5.png,H,"Start at the top and move down, taking single letters or pairs of letters that appear on the same horizontal line. The sum of the numerical values of the  letters in each line increases by 2 as you  go down, from 18 to 26."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-7.png,F,"In each star shape, the sum of the numerical values of the letters bounded by one triangle is equal to that of the other triangle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-9.png,E,"In each stick-man diagram, start on the left foot and move around the other limbs in a clockwise direction. The letters advance through the alphabet in steps given by the numerical value of the letter on the head of the diagram."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-10.png,B,"Add together the numerical values of the letters in corresponding positions on the left and right hand triangles, and put the letter with this value in corresponding segments of the centre triangle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-12.png,A,"Start on the centre left of the diagram, and move in a clockwise spiral towards the centre. Letters advance through the alphabet in steps of 2, 3, 4, etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-14.png,T,"Working through the diagram in columns, left to right, The sum of the numerical values of the letters in each column follows the sequence 17, 18, 19 and 20."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-17.png,Z,"Read the diagram as a whole grid of 4x4 squares. Starting on the bottom left square, move clockwise around the outside of the whole square, with letters written in sequence, skipping 4 letters at a time. Repeat this instruction for the small inner square."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-18.png,X,"Start at the top left and move in alternate boxes from left to right, then down one row and to the left, in a snakes and ladders pattern. Letters advance through the alphabet in steps of 2, 3, 4...8, before repeating this pattern."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-20.png,H,"In each row, the numerical value of the central letter equals the difference between the sum of the numerical values of the two left hand letters and the sum of the numerical values of the two right hand letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-22.png,C,"Start on the far left of the diagram and move around it in a clockwise direction. Letters advance through the alphabet in steps of 8 then 9, repeating this pattern all the way around."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-25.png,E,"Working through the diagram in rows, from top to bottom, the sum of the numerical values of the letters in each row follows the sequence 15, 20, 25, 30, 35"
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-2.png,I,"Letters are arranged in each square in alphabetical order, skipping 5 letters at a time. The letter bounded by the central square carries on this sequence, but using the reverse alphabetical value."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-6.png,O,"In each row, letters follow the alphabetic sequence, in steps of 4 letters each  time for the first row, 5 letters for the second, then 6, 7 etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-8.png,H,"In each row of the diagram, the numerical values of the letters add up to 26."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-11.png,X,"In each circle, start with the top left segment, and move clockwise around the other segments. The value of each letter increases by 5 for the first circle, 6 for the next, then 7, 8 and 9."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-13.png,A,"Converting each letter to its numerical value, the diagram represents a  subtraction sum: 247 - 54 = 193."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-15.png,T,"Starting on the top left, and moving in an anti-clockwise spiral towards the  centre, letters advance through the alphabet by 3 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-17.png,W,"Looking at the diagram in columns, letters in the first column are written with 2 straight lines, in the second column they contain 3 straight lines, and letters in the right hand column are written with 4 straight lines."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-20.png,C,"If you convert each letter to its numerical value, and read pairs of numbers as  2 digit values, the values follow the sequence of multiples of 7."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-23.png,G,"Following lines of circles across all 3 diagrams, letters in the top line follow the alphabetic sequence, in steps of 4 letters at a time. Letters in the central line advance 5 letters, and in the bottom line, 6 letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-25.png,F,"Moving from left to right, letters move though the alphabet in sequence, skipping 12 letters, then 11, 10, 9, 8 etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-27.png,D,The numerical values of the letters in each circle add up to 20.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-4-q-30.png,S,"Taking the numerical value of each letter, they follow the sequence of Prime Numbers."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-3.png,N,"Starting with the A on the left hand side, move around the shape in a clockwise spiral towards the centre. Letters advance through the alphabet in steps of 4, 5 then 6, repeating this pattern all the way around."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-5.png,G,"Starting with A and C, as you move clockwise, the numerical value of the next letter equals the sum of the preceding two letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-6.png,O,"As you move down, letters appear in alphabetical order, skipping those letters only written with straight lines."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-9.png,W,"Starting at the top left, and moving to the right, then down one row and to the left etc. in a snakes and ladders pattern, letters advance through the alphabet by 5 steps, then back 2, repeating this pattern for the rest of the diagram."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-10.png,S,"Taking pairs of letters in the inner and outer segments of each eighth of the diagram, the numerical values always add up to 20."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-13.png,K,"Working in columns, add together the numerical values of the first and second letters, and put the letter with the reverse alphabetical value of this sum in the bottom space."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-14.png,S,"Starting with the G, move clockwise around the circle, in steps of 3 letters, then 4, 5, 6 and 7."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-18.png,I,"As you move down, letters are written in alphabetical order, skipping any letters written with curved lines."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-19.png,F,"Starting with the top segment of the top left square and moving clockwise around the other 3 squares, letters move through the alphabet in steps of 2, with the positions moving one place clockwise each time. Letters in the next segment of the top left square follow the same pattern, in steps of 3 letters etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-22.png,D,"Starting with the bottom right letter and moving in a clockwise spiral around the diagram towards the centre, letters advance through the alphabet six letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-25.png,C,"Converting each letter to its numerical value, and reading pairs of circles as 2 digit numbers, arranged in two vertical columns, numbers follow the sequence of multiples of 7, starting with 14 and ending with 63."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-1.png,M,"The 4 diagrams as a whole contain 2 sequences of letters. The first starts at the top of the top left hand diamond, and goes vertically downwards, then up to the top of the top right hand diamond and down again. Letters in this sequence are written in alphabetical order, in steps of 4 letters at a time. The second sequence starts on the left hand segment of the upper left diamond and moves in horizontal lines from left to right, top row then bottom row, with the letters written in alphabetical order in steps of 5 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-2.png,L,"Moving down the first column, up the second, down the third etc. letters increase by 7 in each alternate circles."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-4.png,Q,"Converting all letters to their numerical values, the middle section of each row of the diagram contains a list of letters which are common multiples of a number, given by the value of the letter in the right hand box. One letter in each row does not follow this sequence, and is put in the left hand box."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-5.png,S,"Join pairs of letters at opposite sides of the diagram, with lines which run through the centre. The sum of the numerical values of the pairs of letters is always 25."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-7.png,N,"In each star, start at the bottom and move anti-clockwise around the points. Letters follow the alphabetic sequence, in steps of 8 letters, for the left hand circle, 9 for the central one and 10 for the right hand circle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-10.png,P,"Start at the top of the left hand triangle and move in horizontal lines, from left to right, across all the triangles at once, top to bottom. Letters are written in sequence, skipping 2 letters, then 3, then 4, before repeating this sequence."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-14.png,N,"Working in columns from top to bottom, left to right, letters are written in alpha- betic sequence, in steps of 3 letters, then 4, then 5 etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-15.png,I,"Starting with the letters in the top left square, and moving around the other squares in a clockwise spiral towards the centre, letters advance through the alphabet in steps of 4 letters at a time, with the relative positions of each letter moving 1/4 turn clockwise at each step."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-17.png,B,"Start with the top left square and move clockwise around the others. The sum of the numerical values of the letters in each square follows the sequence 20, 25, 30 and 35."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-27.png,S,"Start with the top left circle, and move in horizontal lines from left to right, top to bottom, across all 4 shapes. Letters are written in alphabetical order, in steps of 5 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-28.png,H,"Start at the top left segment of the left hand circle and move clockwise, then to the middle circle and move anti-clock- wise, and finally to the right hand circle and move clockwise again. Letters are written in alphabetical order, in steps of 4 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-29.png,V,"Starting with the upper left hand box of the left hand diagram, and moving to the right, letters follow the alphabetical order, 5 letters at a time. A second sequence starts from the middle of this row and goes down, with letters following the alphabetic order, 6 letters at a time. Repeat this pattern for the other diagrams, using steps of 6 and 7 letters, 7 and 8 letters, and 8 and 9 letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-5.png,N,"Starting with B and moving clockwise, letters advance through the alphabet in steps of 2, then 4, 6, 8 and 10."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-9.png,I,"Convert each letter into its numerical value, and read each row as a 3 digit number. Rows follow the sequence of Square Numbers from 15 to 17."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-10.png,W,"Starting with the top left outer segment and moving clockwise, letters advance through the alphabet in steps of 4, then 5, 6, 7 etc. The letters in the inner segments follow the same pattern, but move anti-clockwise."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-13.png,G,"Starting at the top left and working anti-clockwise towards the centre in a spiral, letters advance through the alphabet in steps of 8 at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-14.png,F,"Taking pairs of letters in adjacent segments, their numerical values always add up to 10."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-17.png,V,Each hexagon is filled with the letter of the alphabet you find one place after the vowels.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-18.png,J,Adding 1 to the numerical values of each letter gives the sequence of Prime Numbers.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-24.png,F,"Starting with the B on the lower right of the triangle, and following the diagram round in a clockwise direction, letters move through the alphabet in steps of 5."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-25.png,A,"In each column of the diagram, the sum of the numerical values of the letters is always 25."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-26.png,W,"In each group of 3 squares, starting on the upper left and moving clockwise around the other 2 squares, letters follow the alphabetic sequence in steps of 6 for the left hand diagram, 7 for the upper middle, 8 for the right hand diagram and 9 for the lower one."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-2.png,K,"Add 6 to the numerical value of each of the larger letters, and write the letter with this value in the smaller square diagonally opposite."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-4.png,D,"Converting each letter to its numerical value and reading each line as a 2 digit number, the numbers follow the sequence of multiples of 6, from 36 to 54."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-5.png,O,"Starting with the left hand circle in the top row, add 4 to the numerical value of each letter and write the letter with this value in the corresponding segment of the lower left circle. Continue this pattern, adding 5 to the letter values in the central circle, and 6 in the right hand circle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-6.png,A,"Start at the top left of the diagram, and work down the left hand column, then along one space to the right and up the next column, in a snakes and ladders pattern, write the following repeated sequence of letters: A C P R F D U"
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-8.png,C,"Convert each letter to it’s numerical value, and read horizontal lines as 2 or 3 digit numbers. Add the top 3 digit number to the 2 digit number below to give 200, repeat this pattern for the 3 and 2 digit numbers underneath."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-13.png,Z,"Starting at the top left of the diagram, and moving around it in a Z shape, letters follow the alphabetic sequence, in steps of 6 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-15.png,T,"Working in rows, the numerical value of the letter in the right hand column equals the sum of the numerical values of the letters in the left and central columns."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-16.png,T,"Starting with the top left segment of each circle, and moving clockwise, letters follow the alphabetic sequence, in steps of 3 letters for the top circle, 4 letters for the left hand circle, and 5 letters for the bottom circle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-19.png,L,"In each circle, the numerical value of the letter in the lower left quarter equals the sum of the numerical values of the upper 2 letters, and the numerical value of the letter in the lower right quarter equals the difference between the numerical values of the upper 2 letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-21.png,E,"Start at the top of the diagram, and work through each row from left to right. Letters move through the alphabet, In steps of 3 letters, then 4, 5 and 6, repeating this sequence"
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-23.png,P,"In each diagram, starting on the top left and moving clockwise in a spiral towards the centre, letters increase in value by 3 for the left hand diagram, 4 for the middle, and 5 for the right hand diagram."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-25.png,V,"Starting with the B in the top left, and moving left to right across the diagram in horizontal lines, letters advance through the alphabet in steps of 6 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-8-q-28.png,1,"Start at the top left and move down, then along one space to the right and up the next column, in a snakes and ladders pattern. Letters are written in alternate squares, in steps of 2 letters at a time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-1.png,K,"In each square, start with the left hand segment, and move clockwise around the others. Letters are written in alphabetical order in steps of 10 for the top left square, 11 for the top right, 12 for the lower left and 13 for the lower right."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-4.png,J,"Start on the top left of the diagram and work from top to bottom in columns, from left to right. Letters are written in alphabetic order, in a repeated sequence of steps of 5, 6 and 7."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-7.png,Q,"Treat each star as 2 intersecting triangles, and start on the top or the left of each triangle in each star and move clockwise around it. Letters are written in alphabetical order in steps of 6 for the left hand star, 7 for the central one and 8 for the right hand star."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-13.png,F,"Two sequences are used in these five grids, both only using the lines containing three letters. Firstly, move along the horizontal lines from top left to bottom right in steps of four, starting with the A. Secondly, move down the vertical lines in steps of six, starting with the E. Whenever two numbers cross add the numerical values together and put the solution in the middle of each cross."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-17.png,K,"Start with the top left hand segment of the top left hand square, and move around the other squares in a clockwise direction. Letters are written in sequence in steps of 5 letters at a time for the top left segment, 6 letters for the top right, 7 for the bottom right and 8 for the bottom left. The relative positions of the letters in each sequence move 1 segment clockwise at every step."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-18.png,S,"Split the diagram into 3 rows, each 2 boxes high. In the top double row, letters are written in sequence, from left to right, alternating between the upper and lower row, in steps of 6 letters at a time. The middle row follows the same sequence, in steps of 7 letters at a time, as does the bottom row, in steps of 8 letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-20.png,B,"In each row, the value in the centre equals the difference between the sum of the numerical values of the pair of letters to the left and the pair of letters to the right."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-22.png,K,The sum of the letters in the three adjacent circles on each side of the diagram is always 30.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-23.png,D,"The diagram contains 3 sets of 4 letters - one set of outer corner letters, one set of inner corner letters, and one set of letters on each side of the square. The numerical values of the letters in each set add up to 40."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-25.png,D,"Start with the C at the centre of the diagram and follow 2 sequences of letters, both clockwise from the C, one around the upper half of the diagram, and one around the lower half. Letters in the upper half advance through the alphabet in steps of 7 letters at a time, and letters in the lower half advance in steps of 9."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-27.png,X,"In each diagram, the central letter falls midway between the left and right hand letters, and the top and bottom letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-29.png,I,"Start on the upper left of each diagram, and move to the right, then down the last 2 boxes in the centre. Letters are written in alphabetical order, in steps of 5 for the left hand diagram, 6 for the next, then 7, then 8."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-1.png,K,"Split the circle into 4 quarters, horizontally and vertically, with 2 segments each. Starting with the top left segment, the sum of the numerical values of the letters in the 2 segments equals 15. The sum of the next pair of segments clockwise equals 16, then 17, then 18."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-4.png,Q,"Taking each pair of letters in each row, the numerical value of one letter equals the inverse numerical value of the other letter."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-6.png,H,"Start on the top left of the diagram, and move clockwise in a spiral towards the centre. Letters advance through the alphabet in steps of 5."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-7.png,I,"Start at the top left, and work through the diagram in a Z shape, letters move through the alphabet in steps of 6, then 7, then 8 etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-15.png,O,"Start on the top left and move down, then right one space and up etc in a snakes and ladders pattern. Letters advance through the alphabet in steps of 5."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-16.png,U,"Start with the letters in the left hand circle. Subtract 3 from the numerical values of each letter, and put the letter with this value in the corresponding segments of the upper circle. Repeat this pattern, adding 3 to the numerical values of the letters, and putting the results in corresponding segments of the lower circle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-17.png,N,"Moving from left to right, top to bottom letters follow alphabetical order, skipping any letters written with curved lines."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-18.png,S,"Working from top to bottom, the numerical values of the letters follow the sequence of Prime Numbers, adding 1, then 2, then 3 etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-21.png,L,"Start at the top of the diagram and work in rows, from left to right, top to bottom. Letters move through the alphabet in steps of 4, 5, 6, 7, 8, 9 and 10, before repeating this sequence."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-24.png,X,"Starting with the top letter in each star, and moving clockwise around the others, letters advance through the alphabet in steps of 8 for the left hand star, 9 for the central star, and 10 for the right hand star."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-25.png,V,"Working from left to right, following the zig-zag pattern of the line, letters move through the alphabet skipping 15 letters, then 14, then 13 etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-10-q-28.png,2,"Split the diagram horizontally and vertically into 4 quarters. A sequence of letters is written in each quarter, following the alphabetic order, 3 letters at a time, starting with the upper left quarter. Add 2 to the values of each letter to give the letters in the next quarter clockwise, then 3, then 4."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-11-q-3.png,F,"Working in rows, from top to bottom, the sum of the numerical values of the letters in each row starts at 12, and increases by 2 as you go down each row."

@@ -1,45 +1,79 @@
-question_image,correct_answer,explanation
-https://www.indiabix.com/_files/images/puzzles/10-1-q-1.png,D,"The number of black dots in each grid increases by 1 each time, starting with the top left grid and working to the right, top row then  bottom row."
-https://www.indiabix.com/_files/images/puzzles/10-2-q-2.png,Q,Adding the three numbers in each square together gives the numerical value of the letter at the centre of each square.
-https://www.indiabix.com/_files/images/puzzles/10-2-q-3.png,Hammer,"The Hammer = 1, the File = 3 and the Axe = 5"
-https://www.indiabix.com/_files/images/puzzles/10-2-q-8.png,U,Multiply the numerical values of the letters in each pair to give the 3 digit result in the spaces above.
-https://www.indiabix.com/_files/images/puzzles/10-3-q-23.png,12,The value at each corner of the diagram equals the difference between the sums of the  numerical values of the letters in the boxes adjacent to the corner.
-https://www.indiabix.com/_files/images/puzzles/10-3-q-24.png,C,[NIL]
-https://www.indiabix.com/_files/images/puzzles/10-6-q-24.png,A,[NIL]
-https://www.indiabix.com/_files/images/puzzles/10-7-q-1.png,E,"In each row, the left hand grid is symmetrical around a vertical axis, the central grid is symmetrical about a horizontal axis, and the right hand grid is symmetrical about a diagonal axis, running bottom left to top right."
-https://www.indiabix.com/_files/images/puzzles/10-8-q-3.png,Carriage,"The Carriage = 2, the Car = 3 and the Bus = 6"
-https://www.indiabix.com/_files/images/puzzles/10-6-q-11.png,B,"In each row of the diagram, the reverse alphabetical value of the central letter equals the sum of the left and right hand digits."
-https://www.indiabix.com/_files/images/puzzles/10-6-q-20.png,G,"Convert each letter to its numerical value, and read each pair of values as 2 digit numbers. In each row, the number in the centre equals the difference between the 2 digit values on the left and right."
-https://www.indiabix.com/_files/images/puzzles/10-6-q-23.png,Y,"Start in the top left hand corner and move anti clockwise around the perimeter of the square. Letters are written in alphabetical order, skipping 1 letter, then 2 letters, then 3 etc."
-https://www.indiabix.com/_files/images/puzzles/10-9-q-24.png,C,[NIL]
-https://www.indiabix.com/_files/images/puzzles/10-9-q-28.png,4,"Split the left and right hand circles into 2 halves vertically. The numerical value of the letter in the upper left segment of the central circle equals the sum of the numbers in the left half of the left hand circle, and the letter in the lower left equals the sum of the numbers in the right half of the left hand circle. Repeat this pattern for the right hand circle."
-https://www.indiabix.com/_files/images/puzzles/10-9-q-30.png,3,"Starting on the left and working to the right, take pairs of dominoes and calculate the sum of the dots they are displaying. This sum follows the sequence 3, 6, 9 and 12."
-https://www.indiabix.com/_files/images/puzzles/10-10-q-3.png,Doughnut,"The Doughnut = 4, the Eclair = 6 and the Bun = 7."
-https://www.indiabix.com/_files/images/puzzles/10-11-q-1.png,F,"In each diagram, the black circles join together to make straight sided polygons. Working from left to right, top row then bottom row, the number of sides in each polygon increases by 1 each time, from 3 to 8."
-https://www.indiabix.com/_files/images/puzzles/10-12-q-4.png,Z,"In each row, multiply the numerical values of the left and right hand letters, putting the result in the centre."
-https://www.indiabix.com/_files/images/puzzles/10-15-q-24.png,B,[NIL]
-https://www.indiabix.com/_files/images/puzzles/10-15-q-28.png,4,"Split the left and right hand circles in half vertically. The letter with the numerical value of the sum of the digits in the left half of the left hand circle is placed in the top left segment of the central circle, and the letter with the numerical value of the sum of the digits in the right half of the left hand circle is placed in the top right segment of the central circle. Repeat this formula for the 2 halves of the right hand circle, putting the resulting letters in the lower segments of the central circle."
-https://www.indiabix.com/_files/images/puzzles/10-16-q-3.png,Anchor,"The Binoculars = 1, the Anchor = 3 and the Buoy = 5"
-https://www.indiabix.com/_files/images/puzzles/10-17-q-1.png,A,"Working in rows, if you superimpose the pattern of spots in the left and right hand grids you get the pattern in the central grid."
-https://www.indiabix.com/_files/images/puzzles/10-17-q-3.png,O,"Working in rows, add up the digits in each row and put the letter with this numerical value in the centre of the row."
-https://www.indiabix.com/_files/images/puzzles/10-18-q-4.png,5,"In each row, add together the numerical values of the 3 central letters to give a 2 digit sum, and put this 2 digit sum in the left and right hand boxes at the end of the rows."
-https://www.indiabix.com/_files/images/puzzles/10-4-q-3.png,Alarm clock,"The Alarm clock = 7, the Adaptor = 5 and the Bulb = 2"
-https://www.indiabix.com/_files/images/puzzles/10-5-q-1.png,A,"Working from left to right, top row then bottom row, the first grid contains a sequence of 2 black dots and a sequence of 3. The next grid contains one of 3 and one of 4. Continue, adding 1 to each sequence every time."
-https://www.indiabix.com/_files/images/puzzles/10-6-q-8.png,3,"In each diagram, the numerical value of the left hand letter equals the product of the upper and lower left hand numbers, and the right hand letter equals the product of the upper and lower right hand numbers. The numerical value of the central letter equals the sum of the numerical values of the left and right hand letters."
-https://www.indiabix.com/_files/images/puzzles/10-12-q-8.png,F,"In each diagram, convert each letter to its numerical value, and read the top and bottom pairs of letters as complete 2 digit values. Multiply these values together to give the 3 digit result written in the centre spaces."
-https://www.indiabix.com/_files/images/puzzles/10-12-q-24.png,C,[NIL]
-https://www.indiabix.com/_files/images/puzzles/10-12-q-30.png,3,"As you move from left to right, the spot total on each domino increases by 3 then decreases by 1 alternately."
-https://www.indiabix.com/_files/images/puzzles/10-13-q-1.png,B Grid,"Working in rows, left to right, top row then bottom, one black circle is added each time, with the positions of the circles moving (1/4) turn clockwise each time."
-https://www.indiabix.com/_files/images/puzzles/10-14-q-13.png,6,"In each row of the diagram, the numerical value of the middle letter equals the sum of the left and right hand numbers, subtracting 3."
-https://www.indiabix.com/_files/images/puzzles/10-14-q-17.png,A,"In each diagram, there are 2 lines of black dots, joining two sides together. The sides joined by the dots moves 1/4 turn clockwise as you move from left to right."
-https://www.indiabix.com/_files/images/puzzles/10-15-q-2.png,M,"In each column, add up each number and put the letter with this sum in the bottom circle."
-https://www.indiabix.com/_files/images/puzzles/10-15-q-4.png,0,"In each row, the left hand number equals the total of the even valued letters in the middle box, and the right hand number equals the total of the odd valued letters in the middle box."
-https://www.indiabix.com/_files/images/puzzles/10-15-q-20.png,C,"In each row, calculate the difference between the 2 numbers in the left hand column, and the 2 numbers in the right hand column. Multiply these differences together to give the numerical value of the letter in the centre."
-https://www.indiabix.com/_files/images/puzzles/10-20-q-27.png,C,"In each circle, multiply the inverse alphabetical value of the upper left hand letter by the regular alphabetical value of the upper right hand letter to give the value in the lower segment."
-https://www.indiabix.com/_files/images/puzzles/10-20-q-28.png,5,"Splitting the diagram in half both horizontally and vertically, each quarter contains a pattern of black squares, representing the letters W, X, Y and Z."
-https://www.indiabix.com/_files/images/puzzles/10-18-q-11.png,P,"Working in rows, add the left and right hand numbers together, and put the letter with the reverse alphabetical value of this sum in the central box."
-https://www.indiabix.com/_files/images/puzzles/10-18-q-24.png,B,[NIL]
-https://www.indiabix.com/_files/images/puzzles/10-19-q-1.png,B,"In each row, the left hand grid contains one line of black dots, the central one contains 2 lines and the right hand one contains 3 lines."
-https://www.indiabix.com/_files/images/puzzles/10-1-q-1.png,D,"The number of black dots in each grid increases by 1 each time, starting with the top left grid and working to the right, top row then  bottom row."
-https://www.indiabix.com/_files/images/puzzles/10-2-q-2.png,Q,Adding the three numbers in each square together gives the numerical value of the letter at the centre of each square.
-https://www.indiabix.com/_files/images/puzzles/10-2-q-3.png,Hammer,"The Hammer = 1, the File = 3 and the Axe = 5"
+question_image,correct_answer,explanation
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-1.png,D,"The number of black dots in each grid increases by 1 each time, starting with the top left grid and working to the right, top row then  bottom row."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-2.png,Q,Adding the three numbers in each square together gives the numerical value of the letter at the centre of each square.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-3.png,HAMMER,"The Hammer = 1, the File = 3 and the Axe = 5"
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-8.png,U,Multiply the numerical values of the letters in each pair to give the 3 digit result in the spaces above.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-23.png,12,The value at each corner of the diagram equals the difference between the sums of the  numerical values of the letters in the boxes adjacent to the corner.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-3-q-24.png,C,[NIL]
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-24.png,A,[NIL]
+,,
+https://www.indiabix.com/_files/images/puzzles/10-7-q-1.png,E,"In each row, the left hand grid is symmetrical around a vertical axis, the central grid is symmetrical about a horizontal axis, and the right hand grid is symmetrical about a diagonal axis, running bottom left to top right."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-11.png,B,"In each row of the diagram, the reverse alphabetical value of the central letter equals the sum of the left and right hand digits."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-20.png,G,"Convert each letter to its numerical value, and read each pair of values as 2 digit numbers. In each row, the number in the centre equals the difference between the 2 digit values on the left and right."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-23.png,Y,"Start in the top left hand corner and move anti clockwise around the perimeter of the square. Letters are written in alphabetical order, skipping 1 letter, then 2 letters, then 3 etc."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-24.png,C,[NIL]
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-28.png,4,"Split the left and right hand circles into 2 halves vertically. The numerical value of the letter in the upper left segment of the central circle equals the sum of the numbers in the left half of the left hand circle, and the letter in the lower left equals the sum of the numbers in the right half of the left hand circle. Repeat this pattern for the right hand circle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-9-q-30.png,3,"Starting on the left and working to the right, take pairs of dominoes and calculate the sum of the dots they are displaying. This sum follows the sequence 3, 6, 9 and 12."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-11-q-1.png,F,"In each diagram, the black circles join together to make straight sided polygons. Working from left to right, top row then bottom row, the number of sides in each polygon increases by 1 each time, from 3 to 8."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-12-q-4.png,Z,"In each row, multiply the numerical values of the left and right hand letters, putting the result in the centre."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-15-q-24.png,B,[NIL]
+,,
+https://www.indiabix.com/_files/images/puzzles/10-15-q-28.png,4,"Split the left and right hand circles in half vertically. The letter with the numerical value of the sum of the digits in the left half of the left hand circle is placed in the top left segment of the central circle, and the letter with the numerical value of the sum of the digits in the right half of the left hand circle is placed in the top right segment of the central circle. Repeat this formula for the 2 halves of the right hand circle, putting the resulting letters in the lower segments of the central circle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-17-q-1.png,A,"Working in rows, if you superimpose the pattern of spots in the left and right hand grids you get the pattern in the central grid."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-17-q-3.png,O,"Working in rows, add up the digits in each row and put the letter with this numerical value in the centre of the row."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-18-q-4.png,5,"In each row, add together the numerical values of the 3 central letters to give a 2 digit sum, and put this 2 digit sum in the left and right hand boxes at the end of the rows."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-5-q-1.png,A,"Working from left to right, top row then bottom row, the first grid contains a sequence of 2 black dots and a sequence of 3. The next grid contains one of 3 and one of 4. Continue, adding 1 to each sequence every time."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-6-q-8.png,3,"In each diagram, the numerical value of the left hand letter equals the product of the upper and lower left hand numbers, and the right hand letter equals the product of the upper and lower right hand numbers. The numerical value of the central letter equals the sum of the numerical values of the left and right hand letters."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-12-q-8.png,F,"In each diagram, convert each letter to its numerical value, and read the top and bottom pairs of letters as complete 2 digit values. Multiply these values together to give the 3 digit result written in the centre spaces."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-12-q-24.png,C,[NIL]
+,,
+https://www.indiabix.com/_files/images/puzzles/10-12-q-30.png,3,"As you move from left to right, the spot total on each domino increases by 3 then decreases by 1 alternately."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-14-q-13.png,6,"In each row of the diagram, the numerical value of the middle letter equals the sum of the left and right hand numbers, subtracting 3."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-14-q-17.png,A,"In each diagram, there are 2 lines of black dots, joining two sides together. The sides joined by the dots moves 1/4 turn clockwise as you move from left to right."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-15-q-2.png,M,"In each column, add up each number and put the letter with this sum in the bottom circle."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-15-q-4.png,0,"In each row, the left hand number equals the total of the even valued letters in the middle box, and the right hand number equals the total of the odd valued letters in the middle box."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-15-q-20.png,C,"In each row, calculate the difference between the 2 numbers in the left hand column, and the 2 numbers in the right hand column. Multiply these differences together to give the numerical value of the letter in the centre."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-20-q-27.png,C,"In each circle, multiply the inverse alphabetical value of the upper left hand letter by the regular alphabetical value of the upper right hand letter to give the value in the lower segment."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-20-q-28.png,5,"Splitting the diagram in half both horizontally and vertically, each quarter contains a pattern of black squares, representing the letters W, X, Y and Z."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-18-q-11.png,P,"Working in rows, add the left and right hand numbers together, and put the letter with the reverse alphabetical value of this sum in the central box."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-18-q-24.png,B,[NIL]
+,,
+https://www.indiabix.com/_files/images/puzzles/10-19-q-1.png,B,"In each row, the left hand grid contains one line of black dots, the central one contains 2 lines and the right hand one contains 3 lines."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-1-q-1.png,D,"The number of black dots in each grid increases by 1 each time, starting with the top left grid and working to the right, top row then  bottom row."
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-2.png,Q,Adding the three numbers in each square together gives the numerical value of the letter at the centre of each square.
+,,
+https://www.indiabix.com/_files/images/puzzles/10-2-q-3.png,HAMMER,"The Hammer = 1, the File = 3 and the Axe = 5"

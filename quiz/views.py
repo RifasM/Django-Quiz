@@ -306,7 +306,6 @@ def send_email(email, name, score, ch, questions):
         msg = EmailMessage(subject, message, "Efkairies CMRIT <" + EMAIL_HOST_USER + ">", [str(email), str(EMAIL_HOST_USER)])
         msg.content_subtype = "html"  # Main content is now text/html
         msg.send()
-        print(e)
         # send_mail(subject, message, EMAIL_HOST_USER, [str(EMAIL_HOST_USER)], fail_silently=False)
 
 
