@@ -31,15 +31,22 @@ def get_questions(n, request):
         explanation = pd.read_csv("quiz"+str(test_num)+".csv", encoding='windows-1252', usecols=col_list)["explanation"]
         questions = questions.dropna()
         answers = answers.dropna()
+        ans = []
+        for i in answers:
+            if re.match("\d+\.\d+", str(i)):
+                ans.append(int(i))
+            else:
+                ans.append(str(i))
         explanation = explanation.dropna()
         question_list = []
         for i in range(n):
             rand_ques_num = randint(0, len(list(questions))-1)
-            question_list.append([list(questions)[rand_ques_num], list(answers)[rand_ques_num], list(explanation)[rand_ques_num]])
+            question_list.append([list(questions)[rand_ques_num], list(ans)[rand_ques_num], list(explanation)[rand_ques_num]])
         # list_of_questions = zip(list(questions), list(answers), list(explanation))
         # return render(request, "index.html", {'ques': list_of_questions})
         return question_list
     except Exception as e:
+        print(e)
         return render(request, "error.html", {"user": request.user.get_full_name()})
 
 
