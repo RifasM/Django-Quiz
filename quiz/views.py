@@ -41,8 +41,9 @@ def get_questions(n, request):
         question_list = []
         rand_ques_num = []
         rand = randint(0, len(list(questions)) - 1)
-        while rand not in rand_ques_num and len(rand_ques_num) < n:
-            rand_ques_num.append(rand)
+        while len(rand_ques_num) < n:
+            if rand not in rand_ques_num:
+                rand_ques_num.append(rand)
             rand = randint(0, len(list(questions)) - 1)
         for i in range(n):
             question_list.append([list(questions)[rand_ques_num[i]], list(ans)[rand_ques_num[i]], list(explanation)[rand_ques_num[i]]])
@@ -61,7 +62,7 @@ def start(request):
             request.session['questions'] = get_questions(num_questions, request)
             request.session['qno'] = 0
             request.session['score'] = 0
-            return render(request, 'instructions.html', {'user': username, 'time': quiz_time})
+            return render(request, 'instructions.html', {'user': username, 'time': quiz_time, 'num_ques': num_questions})
     except Exception as e:
         return render(request, "error.html", {"user": request.user.get_full_name()})
 
