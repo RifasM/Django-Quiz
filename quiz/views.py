@@ -18,10 +18,16 @@ from collections import Counter
 
 col_list = ["question_image", "correct_answer", "explanation"]
 
-num_questions = int(Instructions.objects.get().num_questions) or 0
-quiz_time = int(Instructions.objects.get().test_time) or 0
-test_name = str(Instructions.objects.get().test_name) or "Default"
-test_num = int(Instructions.objects.get().test_number) or 1
+try:
+    num_questions = int(Instructions.objects.get().num_questions) or 0
+    quiz_time = int(Instructions.objects.get().test_time) or 0
+    test_name = str(Instructions.objects.get().test_name) or "Default"
+    test_num = int(Instructions.objects.get().test_number) or 1
+except Exception as e:
+    num_questions = 0
+    quiz_time = 0
+    test_name = "Enter Test name in Instructions"
+    test_num = 1
 
 
 def get_questions(n, request):
@@ -47,12 +53,11 @@ def get_questions(n, request):
             rand = randint(0, len(list(questions)) - 1)
         for i in range(n):
             question_list.append([list(questions)[rand_ques_num[i]], list(ans)[rand_ques_num[i]], list(explanation)[rand_ques_num[i]]])
-        # list_of_questions = zip(list(questions), list(answers), list(explanation))
-        # return render(request, "index.html", {'ques': list_of_questions})
         return question_list
     except Exception as e:
         print(e)
-        return render(request, "error.html", {"user": request.user.get_full_name()})
+        request.status_code = 500
+        return request
 
 
 def start(request):
@@ -112,12 +117,14 @@ def next_ques(request):
     try:
         if request.method == "POST" and request.user.is_authenticated:
             username = request.user.get_full_name()
-            ans = request.POST['answer']
+            ans = str(request.POST['answer'])
             qno = int(request.session['qno'])
             q = list(request.session['questions'])
             s = int(request.session['score'])
             t = request.session['time']
-            if ans == q[qno][1]:
+            """print("next ans: ", str(q[qno+1][1]))
+            print("Current: ", ans == str(q[qno][1]))"""
+            if ans == str(q[qno][1]):
                 request.session['score'] = s = s + 1
             global num_questions
             request.session['qno'] = qno = qno + 1
