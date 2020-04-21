@@ -122,8 +122,6 @@ def next_ques(request):
             q = list(request.session['questions'])
             s = int(request.session['score'])
             t = request.session['time']
-            """print("next ans: ", str(q[qno+1][1]))
-            print("Current: ", ans == str(q[qno][1]))"""
             if ans == str(q[qno][1]):
                 request.session['score'] = s = s + 1
             global num_questions
