@@ -60,7 +60,8 @@
                         {% csrf_token %}
                         <input class="input--style-3" type="text" name="answer" placeholder="Enter your answer here" required>
                         <br><br>
-                        <h6 class="title"><strong>Fill in your answers as capital</strong></h6>
+                        <p class="title"><strong>Fill in your answers as capital, only for letter based questions</strong></p>
+                        <p class="title">Not for number based</p>
                         <br><br>
                         <button class="btn btn--pill btn-outline-info" style="color:#000;" type="submit">Submit</button>
                     </form>
