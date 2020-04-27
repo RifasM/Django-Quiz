@@ -47,12 +47,19 @@ Developed for Efkairies Club, CMRIT
     - On Windows
         - `store MAIL_USERNAME in your PATH`
         - `store MAIL_PASSWORD in your PATH`
+- Create Superuser
+    - `python3 manage.py createsuperuser`
+    - Follow the steps to create a superuser
 - Run the server
     - Development `python3 manage.py runserver`
     - Development with `DEBUG=False` - `python3 manage.py runserver --insecure`
     - To run on `Port 80` - `python3 manage.py runserver --insecure 0:80`
         -Remember to stop `apache2` service before running on `Port 80`
-        
+- Enter test settings in Django Admin page:
+    - Navigate to `127.0.0.1/admin`
+    - Login with the created credentials
+    - Navigate to Instructions and fill in the required Test Settings
+    - Click save and restart server to reflect changes   
 #
 ### Contribute
 - Feel free to raise issues and suggestions are welcome
