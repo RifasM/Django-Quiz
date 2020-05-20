@@ -1,21 +1,18 @@
+# import statements
 from django.core.mail import EmailMessage, send_mail
-from django.db.models import Sum
-from django.template import RequestContext
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-from django.views.generic import TemplateView
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 import pandas as pd
 from random import randint
 from registration.models import Register, Instructions
 from django.contrib.auth import logout
-from django.contrib.auth.models import User
 from datetime import datetime, timedelta
 from quiz.settings import EMAIL_HOST_USER
 import re
 from collections import Counter
 
+# List of columns in csv file
 col_list = ["question_image", "correct_answer", "explanation"]
 
 try:
