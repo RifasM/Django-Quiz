@@ -1,9 +1,9 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Register, Instruction, Test
+from .models import Student, Instruction, Test
 
-admin.site.register(Register)
+admin.site.register(Student)
 admin.site.register(Instruction)
 
-admin.site.test(Test)
+admin.site.register(Test)

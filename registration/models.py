@@ -14,11 +14,11 @@ class Instruction(models.Model):
         return self.test_number
 
 
-class Register(models.Model):
+class Student(models.Model):
     name = models.CharField(help_text="Name", max_length=25)
     usn = models.CharField(help_text="USN", max_length=10)
     email = models.EmailField(help_text="Email", max_length=25, primary_key=True)
-    group = models.CharField(help_text="Enter group", max_length=25)
+    group = models.CharField(help_text="Enter group", max_length=10, null=True, blank=True)
     score = models.CharField(help_text="Test Score", max_length=5, blank=True)
 
     def __str__(self):
@@ -42,7 +42,7 @@ class Test(models.Model):
                                       blank=True)
     test_end = models.DateTimeField(help_text="Enter Test Validity End Date and time, leave blank if no expiry",
                                     blank=True)
-    max_attempt = models.CharField(help_text="Maximum Attempts allowed, leave blank if no constraint", blank=True)
+    max_attempt = models.CharField(help_text="Maximum Attempts allowed, leave blank if no constraint", max_length=1, blank=True)
 
     def __str__(self):
         return self.test_num
